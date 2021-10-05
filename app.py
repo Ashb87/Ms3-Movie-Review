@@ -25,6 +25,8 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# ------- Register function
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -49,6 +51,8 @@ def register():
 
     return render_template("register.html")
 
+
+# ------- Login function    
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -78,12 +82,14 @@ def login():
     return render_template("login.html")
 
 
+# ------- Profile
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    
+   
     if session["user"]:
         return render_template("profile.html", username=username)
 
