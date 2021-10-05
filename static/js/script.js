@@ -1,30 +1,28 @@
-$(document).ready(function(){
-    $(".sidenav").sidenav();
-  });
+$(document).ready(function () {
+  $(".sidenav").sidenav();
+});
 
 
+// Check to see if the passwords match when user registers
 
+const checkIfPasswordsMatch = () => {
+  let password = document.getElementById('password');
+  let confirmPassword = document.getElementById('confirm_password');
 
-  const checkIfPasswordsMatch = () => {
-    let password = document.getElementById('password');
-    let confirmPassword = document.getElementById('confirm_password');
-  
-    let messageText = document.querySelector('.message-text');
-    let regButton = document.querySelector('.btn-large');
-  
-    // Check if passwords match
-  
-    if (password.value !== confirmPassword.value) {
-      messageText.innerHTML = 'Passwords do not match!';
-      messageText.style.color = 'red';
-  
-      regButton.setAttribute('disabled', true);
-      regButton.classList.add('btn-disabled');
-    } else if (password.value === confirmPassword.value) {
-      messageText.innerHTML = 'Passwords match!';
-      messageText.style.color = 'green';
-      
-      regButton.removeAttribute('disabled', true);
-      regButton.classList.remove('btn-disabled');
-    }
-  };
+  let messageText = document.querySelector('.message-text');
+  let regButton = document.querySelector('.btn-large');
+
+  if (password.value !== confirmPassword.value) {
+    messageText.innerHTML = 'Passwords do not match!';
+    messageText.style.color = 'red';
+
+    regButton.setAttribute('disabled', true);
+    regButton.classList.add('btn-disabled');
+  } else if (password.value === confirmPassword.value) {
+    messageText.innerHTML = 'Passwords match!';
+    messageText.style.color = 'green';
+
+    regButton.removeAttribute('disabled', true);
+    regButton.classList.remove('btn-disabled');
+  }
+};
