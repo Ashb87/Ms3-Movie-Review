@@ -26,12 +26,12 @@ def home():
     return render_template("index.html")
 
 
-# ------- Recipes
+# ------- Movies
 
-@app.route("/recipes")
-def recipes():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+@app.route("/movies")
+def movies():
+    movies = mongo.db.movies.find()
+    return render_template("movies.html", movies=movies)
 
 
 # ------- Register function
@@ -61,7 +61,7 @@ def register():
     return render_template("register.html")
 
 
-# ------- Login function    
+# ------- Login function  
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
