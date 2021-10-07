@@ -1,5 +1,33 @@
+body{
+    background-color: #003049;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 
+/* --- Nav Bar --- */
+
+nav.nav-extended .nav-wrapper{
+    background-color: #d62828;
+}
+
+nav .brand-logo {
+    margin-left: 25px;
+    color: #eae2b7
+}
+
+nav ul {
+    margin-right: 25px;
+}
+
+nav ul a {
+    color: #eae2b7
+}
+
+/* --- Home Page --- */
+
+.home-card{
+    background-color: #fcbf49;
+}
