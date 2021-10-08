@@ -1,12 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for movie in movies %}
+    <!-- {% for movie in movies %}
         {{ movie.movie_name }}<br>
         {{ movie.category_name }}<br>
         {{ movie.movie_description }}<br>
         {{ movie.rating}}
-    {% endfor %}
+    {% endfor %} -->
+
+    <ul class="collapsible">
+        {% for movie in movies %}
+        <li>
+            <div class="collapsible-header">
+                <i class="fas fa-caret-down"></i>First
+                <strong>{{ movie.movie_name }}</strong>
+            </div>
+            <div class="collapsible-body white-text text-shadow">
+                <strong>{{ movie.category_name }}</strong>
+                <p>{{ movie.movie_description }}</p>
+                <p>{{ movie.rating}}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
-    

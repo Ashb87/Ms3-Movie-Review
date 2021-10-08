@@ -30,7 +30,7 @@ def home():
 
 @app.route("/movies")
 def movies():
-    movies = mongo.db.movies.find()
+    movies = list(mongo.db.movies.find())
     return render_template("movies.html", movies=movies)
 
 
@@ -113,6 +113,18 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/delete_account")
+def delete_account():
+    # Delete user, end session, display messsage and redirect to library
+    user_id = mongo.db.users.find_one(
+          {"username": session["user"]})["_id"]
+    mongo.db.profiles.remove({"user_id": ObjectId(user_id)})
+    mongo.db.users.remove({"username": session["user"]})
+    session.pop("user")
+    flash("Account Successfully Deleted, We're sorry to see you go.")
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":
