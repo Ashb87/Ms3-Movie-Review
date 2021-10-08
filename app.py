@@ -115,16 +115,9 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/delete_account")
-def delete_account():
-    # Delete user, end session, display messsage and redirect to library
-    user_id = mongo.db.users.find_one(
-          {"username": session["user"]})["_id"]
-    mongo.db.profiles.remove({"user_id": ObjectId(user_id)})
-    mongo.db.users.remove({"username": session["user"]})
-    session.pop("user")
-    flash("Account Successfully Deleted, We're sorry to see you go.")
-    return redirect(url_for("home"))
+@app.route("/add_movie")
+def add_movie():
+    return render_template("add_movie.html")
 
 
 if __name__ == "__main__":
