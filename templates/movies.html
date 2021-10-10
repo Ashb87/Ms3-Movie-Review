@@ -12,13 +12,14 @@
         {% for movie in movies %}
         <li>
             <div class="collapsible-header">
-                <i class="fas fa-caret-down"></i>First
+                <i class="fas fa-caret-down"></i>
                 <strong>{{ movie.movie_name }}</strong>
             </div>
             <div class="collapsible-body white-text text-shadow">
                 <strong>{{ movie.category_name }}</strong>
                 <p>{{ movie.movie_description }}</p>
-                <p>{{ movie.rating}}</p>
+                <p>{{ movie.movie_review }}</p>
+                <p>Rating: {{ movie.rating}}/5</p>
             </div>
         </li>
         {% endfor %}
