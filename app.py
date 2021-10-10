@@ -117,11 +117,23 @@ def logout():
 
 # ------- Add Movie function
 
-@app.route("/add_movie")
+@app.route("/add_movie", methods=["GET", "POST"])
 def add_movie():
+    if request.method == "POST":
+        movie = {
+            "category_name": request.form.get("category_name"),
+            "movie_name": request.form.get("movie_name"),
+            "movie_description": request.form.get("movie_description"),
+            "movie_review": request.form.get("movie_review"),
+            "cover_image": request.form.get("cover_image"),
+            "added_by": session["user"]
+        }
+        mongo.db.movies.insert_one(movie)
+        flash("Movie Successfully Added")
+        return redirect(url_for("movies"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_movie.html", categories=categories)
-
 
 
 if __name__ == "__main__":

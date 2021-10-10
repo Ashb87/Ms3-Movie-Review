@@ -1,28 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- {% for movie in movies %}
-        {{ movie.movie_name }}<br>
-        {{ movie.category_name }}<br>
-        {{ movie.movie_description }}<br>
-        {{ movie.rating}}
-    {% endfor %} -->
+    <h3 class="center-align">Movie Reviews</h3>
 
-    <ul class="collapsible">
-        {% for movie in movies %}
-        <li>
-            <div class="collapsible-header">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ movie.movie_name }}</strong>
-            </div>
-            <div class="collapsible-body white-text text-shadow">
-                <strong>{{ movie.category_name }}</strong>
-                <p>{{ movie.movie_description }}</p>
-                <p>{{ movie.movie_review }}</p>
-                <p>Rating: {{ movie.rating}}/5</p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
+    <!-- If user is logged in display add book button -->
+    {% if session.user %}
+    <div class="row center-align">
+        <div class="col-10 offset-1 col-md-4 offset-md-4">
+            <a href="{{ url_for('add_movie') }}" class="btn btn-lg hover">
+            <i class="fas fa-plus" aria-hidden="true"></i> Add a Movie Review</a>
+        </div>
+    </div>
+    <hr>
+    {% endif %}
+
+    {% for movie in movies %}
+    
+    <div class="row">
+        <div class="col s6">
+            <h3>{{ movie.movie_name }}</h3>
+        </div>
+        <div class="white-text text-shadow col s6">
+            <p>Movie Genre: <strong>{{ movie.category_name }}</strong></p>
+            <p>{{ movie.movie_description }}</p>
+            <p>{{ movie.movie_review }}</p>
+            <p><em>Review added by: {{ movie.added_by }}</em></p>
+        </div>
+    </div>
+    
+    {% endfor %}
 
 {% endblock %}
