@@ -126,6 +126,7 @@ def add_movie():
             "movie_description": request.form.get("movie_description"),
             "movie_review": request.form.get("movie_review"),
             "cover_image": request.form.get("cover_image"),
+            "image_url": request.form.get("image_url"),
             "added_by": session["user"]
         }
         mongo.db.movies.insert_one(movie)

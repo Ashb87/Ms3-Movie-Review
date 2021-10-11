@@ -39,3 +39,7 @@ nav ul a {
 .add-movie-card {
     background-color: #fcbf49;
 }
+
+.movie-img-container img{
+    border-radius: 20px;
+}
