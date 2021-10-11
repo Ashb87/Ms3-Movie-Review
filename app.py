@@ -61,7 +61,7 @@ def register():
     return render_template("register.html")
 
 
-# ------- Login function  
+# ------- Login function
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -98,7 +98,7 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-   
+
     if session["user"]:
         return render_template("profile.html", username=username)
 
@@ -135,6 +135,13 @@ def add_movie():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_movie.html", categories=categories)
+
+
+@app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
+def edit_movie(movie_id):
+    movie = mongo.db.tasks.find_one({"_id": ObjectId(movie_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_movie.html", movie=movie, categories=categories)
 
 
 if __name__ == "__main__":
