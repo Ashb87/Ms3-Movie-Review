@@ -34,12 +34,24 @@ nav ul a {
 }
 
 
-/* --- Add Movie Page --- */
+/* --- Add-Movie Page --- */
 
 .add-movie-card {
     background-color: #fcbf49;
 }
 
+
+/* --- Movie Review Page ---*/
+
 .movie-img-container img{
     border-radius: 20px;
+}
+
+.btn-small {
+    margin: 20px;
+    border-radius: 10px;
+}
+
+hr {
+    border-color: #d62828
 }
