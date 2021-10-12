@@ -139,7 +139,7 @@ def add_movie():
 
 @app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
 def edit_movie(movie_id):
-    movie = mongo.db.tasks.find_one({"_id": ObjectId(movie_id)})
+    movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_movie.html", movie=movie, categories=categories)
 

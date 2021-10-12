@@ -53,5 +53,7 @@ nav ul a {
 }
 
 hr {
-    border-color: #d62828
+    width: 60%;
+    border: none;
+    border-bottom: 3px solid #d62828;
 }
