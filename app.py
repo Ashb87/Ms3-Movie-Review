@@ -163,6 +163,13 @@ def delete_movie(movie_id):
     flash("Your review has been Successfully Deleted")
     return redirect(url_for("movies"))
 
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
