@@ -37,7 +37,9 @@
                     <div class="input-field col s12">
                         <i class="fas fa-align-left prefix"></i>
                         <textarea id="movie_description" name="movie_description" minlength="5" 
-                            maxlength="200" class="materialize-textarea validate" rows="5" required></textarea>
+                            maxlength="200" class="materialize-textarea validate" rows="5" required>
+                            {{- movie.movie_description -}}
+                        </textarea>
                         <label for="movie_description">Movie Description</label>
                     </div>
                 </div>
@@ -46,7 +48,9 @@
                     <div class="input-field col s12">
                         <i class="fas fa-star prefix"></i>
                         <textarea id="movie_review" name="movie_review" minlength="5" 
-                            maxlength="200" class="materialize-textarea validate" rows="5" required></textarea>
+                            maxlength="200" class="materialize-textarea validate" rows="5" required>
+                            {{- movie.movie_review -}}
+                        </textarea>
                         <label for="movie_review">Movie Review</label>
                     </div>
                 </div>
@@ -56,12 +60,15 @@
                         <i class="far fa-image prefix form-icon"></i>
                         <input type="url" id="image_url" name="image_url" class="validate" pattern="https?://.+"
                             required>
-                        <label for="image_url">Movie URL</label>
+                        <label for="image_url">Insert new image URL <em>*Optional*</em></label>
                     </div>
                 </div>
                <!-- Submit Button -->
                 <div class="row">
                     <div class="col s12 center-align">
+                        <a href="{{ url_for('movies') }}" class="btn-large red text-shadow">
+                            Cancel <i class="fas fa-times-circle right"></i>
+                        </a>
                         <button type="submit" class="btn-large text-shadow">
                             Confirm Edit <i class="fas fa-plus right"></i>
                         </button>
