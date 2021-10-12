@@ -1,6 +1,7 @@
 body{
     min-height: 100vh;
-    background-color: #003049;
+    background-color: #03537e;
+    /*background-color: #003049;*/
 }
 
 .text-shadow {
@@ -45,6 +46,7 @@ nav ul a {
 
 .movie-img-container img{
     border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .btn-small {
