@@ -98,9 +98,12 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    movies = list(mongo.db.movies.find(
+        {"added_by": session["user"]}))
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            "profile.html", username=username, movies=movies)
 
     return redirect(url_for("login"))
 

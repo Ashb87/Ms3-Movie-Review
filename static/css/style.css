@@ -59,3 +59,11 @@ hr {
     border: none;
     border-bottom: 3px solid #d62828;
 }
+
+/* --- Profile page --- */
+
+.profile-card{
+    border-radius: 5px;
+    background-color: #fcbf49;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
