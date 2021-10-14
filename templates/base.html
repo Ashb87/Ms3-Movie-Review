@@ -20,7 +20,8 @@
 
     <header>
         <!--Main Navbar-->
-        <nav class="nav-extended text-shadow">
+        <div class="navbar-fixed">
+        <nav class="nav-extended custom-bg text-shadow">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}" class="brand-logo">Movie Review</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
@@ -41,6 +42,7 @@
                 </ul>
             </div>
         </nav>
+        </div>
 
         <!--Mobile Navbar-->
         <ul class="sidenav" id="mobile-demo">

@@ -8,8 +8,8 @@
                     {{ username.capitalize() }}'s Profile
                 </h3>
                 <div class="center-align">
-                    <a href="{{ url_for('add_movie') }}" class="btn btn-lg hover">
-                    <i class="fas fa-plus" aria-hidden="true"></i> Add a Movie Review</a>
+                    <a href="{{ url_for('add_movie') }}" class="btn btn-small btn-add hover">
+                        Add a Movie Review</a>
                 </div>
             </div>
         </div>
@@ -20,31 +20,31 @@
     </h2>
 
     <!-- display users own reviews on their profile page-->
-    {% for movie in movies %}
+    
     
     <div class="row">
-        <div class="col s12 m4">
-            <div class="center-align">
-                <h3>{{ movie.movie_name.title() }}</h3>
-            </div>
+    {% for movie in movies %}
+        <div class="col s12 m4 center-align">
+            <h3>{{ movie.movie_name.title() }}</h3>
+            
             <div class="movie-img-container center-align">
                 <!-- If Movie review has image supplied display this-->
                 {% if movie.image_url %}
-            
-                <img width="200" height="300" src="{{ movie.image_url }}" alt="Image of the movie being reviewed">
-                
+                    <img width="200" height="300" src="{{ movie.image_url }}" 
+                        alt="Image of the movie being reviewed">
                 <!-- If no image url supplied display this default image -->
                 {% else %}
-                <img width="200" height="300" src="static/images/default-img.jpeg" 
-                    alt="Image of an old camera reel">
+                    <img width="200" height="300" src="static/images/default-img.jpeg" 
+                        alt="Image of an old camera reel">
                 {% endif %}
             </div>
-
             
             <div class="center-align">
                 {% if session.user|lower == movie.added_by|lower %}
+                    <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" 
+                        class="btn-small btn-edit">Edit Review</a>
                     <!-- Modal link to give user the option to cancel deleting their review-->
-                    <a class="waves-effect waves-light btn-small modal-trigger" href="#modal1">Delete Review</a>
+                    <a class="btn-small btn-delete modal-trigger" href="#modal1">Delete Review</a>
                     <!-- Modal Body -->
                     <div id="modal1" class="modal">
                         <div class="modal-content">
@@ -53,19 +53,14 @@
                             <p>Do you definitely want to delete your review for {{ movie.movie_name }}?</p>
                         </div>
                         <div class="modal-footer">
-                            <a href="#!" class="modal-close waves-effect waves-green btn-small">Cancel</a>
-                            <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn-small green accent-4 center-align">Delete Review</a>
+                            <a href="#!" class="modal-close btn-cancel btn-small">Cancel</a>
+                            <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn-small btn-delete center-align">Delete Review</a>
                         </div>
                     </div>
-                
-                    <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" 
-                        class="btn-small light-blue lighten-1">Edit Review</a>
                 {% endif %}
             </div>
         </div>
-    </div>
-    <hr>
-    
     {% endfor %}
+    </div>
 
 {% endblock %}

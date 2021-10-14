@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body{
     min-height: 100vh;
     background-color: #03537e;
@@ -8,16 +13,11 @@ body{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-
 /* --- Nav Bar --- */
-
-nav.nav-extended .nav-wrapper{
-    background-color: #d62828;
-}
 
 nav .brand-logo {
     margin-left: 25px;
-    color: #eae2b7
+    color: #fcbf49;
 }
 
 nav ul {
@@ -25,7 +25,40 @@ nav ul {
 }
 
 nav ul a {
-    color: #eae2b7
+    color: #fcbf49;
+}
+
+nav.custom-bg {
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    height: 75px;
+}
+
+/* --- Buttons --- */
+
+.btn-small {
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.btn-add {
+    background-color: #03537e;
+}
+
+.btn-edit,
+.btn-cancel {
+    background-color: #fcbf49;
+    color: black;
+}
+
+.btn-delete {
+    background-color: rgb(207, 4, 4);
+}
+
+.btn-small:hover{
+    background-color: black;
+    color: #fcbf49;
 }
 
 /* --- Home Page --- */
@@ -49,15 +82,11 @@ nav ul a {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.btn-small {
-    margin: 20px;
-    border-radius: 10px;
-}
-
 hr {
-    width: 60%;
+    width: 40%;
     border: none;
     border-bottom: 3px solid #d62828;
+    padding: 20px;
 }
 
 /* --- Profile page --- */
@@ -66,4 +95,13 @@ hr {
     border-radius: 5px;
     background-color: #fcbf49;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+/* --- Media Query --- */
+
+@media screen and (max-width: 992px){
+nav .brand-logo{
+    margin-left: 0;
+    }
 }
