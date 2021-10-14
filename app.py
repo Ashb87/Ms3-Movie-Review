@@ -188,6 +188,7 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    """ Admin can edit the category(genre) selection """
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
@@ -202,9 +203,22 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    """ Allows the admin to delete different genres from the category selection """ 
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
+
+
+@app.route("/delete_user")
+def delete_user():
+    """ Allows users to delete their own account """
+    user_id = mongo.db.users.find_one(
+          {"username": session["user"]})["_id"]
+    mongo.db.profiles.remove({"user_id": ObjectId(user_id)})
+    mongo.db.users.remove({"username": session["user"]})
+    session.pop("user")
+    flash("Account Successfully Deleted, We're sorry to see you go.")
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":
