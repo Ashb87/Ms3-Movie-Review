@@ -139,6 +139,7 @@ def add_movie():
             "movie_review": request.form.get("movie_review"),
             "cover_image": request.form.get("cover_image"),
             "image_url": request.form.get("image_url"),
+            "rating": int(request.form.get("rating")),
             "added_by": session["user"]
         }
         mongo.db.movies.insert_one(movie)
@@ -159,6 +160,7 @@ def edit_movie(movie_id):
             "movie_review": request.form.get("movie_review"),
             "cover_image": request.form.get("cover_image"),
             "image_url": request.form.get("image_url"),
+            "rating": int(request.form.get("rating")),
             "added_by": session["user"]
         }
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)

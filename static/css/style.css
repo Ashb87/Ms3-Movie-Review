@@ -38,7 +38,7 @@ nav.custom-bg {
 /* --- Buttons --- */
 
 .btn-small {
-    margin: 20px;
+    margin: 15px;
     border-radius: 5px;
 }
 
@@ -105,3 +105,19 @@ nav .brand-logo{
     margin-left: 0;
     }
 }
+
+
+label,
+.rating-stars p {
+    margin-bottom: 0;
+}
+input[name=rating] {
+    display: none;
+  }
+.rating-stars label {
+    font-size: 20px;
+    color: blue;
+  }
+.rating-stars input:checked~label {
+    color: white ;
+  }
