@@ -116,7 +116,7 @@ input[name=rating] {
   }
 .rating-stars label {
     font-size: 20px;
-    color: blue;
+    color: #d62828;
   }
 .rating-stars input:checked~label {
     color: white ;
