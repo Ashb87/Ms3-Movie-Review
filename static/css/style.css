@@ -6,7 +6,6 @@
 body{
     min-height: 100vh;
     background-color: #022538;
-    /*background-color: #003049;*/
 }
 
 .text-shadow {
@@ -91,6 +90,18 @@ hr {
 
 .search-bar{
     margin-bottom: 0;
+}
+
+.search-card{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.7)),
+    url("../images/hero-img.jpeg") center center;
+    border-radius: 10px;
+    margin-top: 35px;
+    color: white;
+}
+
+.search-card input{
+    color: white;
 }
 
 /* --- Profile page --- */
