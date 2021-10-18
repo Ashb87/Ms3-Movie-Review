@@ -5,7 +5,7 @@
 
 body{
     min-height: 100vh;
-    background-color: #03537e;
+    background-color: #022538;
     /*background-color: #003049;*/
 }
 
@@ -89,6 +89,10 @@ hr {
     padding: 20px;
 }
 
+.search-bar{
+    margin-bottom: 0;
+}
+
 /* --- Profile page --- */
 
 .profile-card{
@@ -106,6 +110,8 @@ nav .brand-logo{
     }
 }
 
+
+/* --- Star Rating --- */
 
 label,
 .rating-stars p {
