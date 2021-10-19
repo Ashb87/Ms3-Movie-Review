@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>Hello there</h1>
+
+    
+        
+        <div class="row">
+            <div class="col s12 center-align">
+                <h3>{{ review.movie_name }}</h3>
+            </div>
+            <div class="movie-img-container col s12 m6 center-align">
+                <!-- If Movie review has image supplied display this-->
+                {% if review.image_url %}
+            
+                <a href="{{ url_for('movies') }}"><img width="250" height="375" src="{{ review.image_url }}" alt="Image of the movie being reviewed"></a>
+                
+                <!-- If no image url supplied display this default image -->
+                {% else %}
+                <img width="250" height="375" src="static/images/default-img.jpeg" 
+                    alt="Image of an old camera reel">
+                {% endif %}
+            </div>
+
+            <div class="white-text text-shadow col s12 m6 center-align">
+                <p><strong>Movie Genre:</strong> {{ review.category_name }}</p>
+                <p><strong>Movie Synopsis:</strong> {{ review.movie_description }}</p>           
+                <p><strong> Movie Review:</strong> {{ review.movie_review }}</p>
+                <p><strong>Review added by:</strong> <em>{{ review.added_by }}</em></p>
+                <p><strong>Rating: </strong>{{ review.rating }}/5</p>
+            </div>        
+        </div>
+        <hr>
+    
+    
+
+
+{% endblock %}

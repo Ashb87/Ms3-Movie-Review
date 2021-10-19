@@ -34,6 +34,14 @@ def movies():
     return render_template("movies.html", movies=movies)
 
 
+# ------- Reviews
+
+@app.route("/review/<movie_id>")
+def review(movie_id):
+    review = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+    return render_template("reviews.html", review=review)
+
+
 # ------- Search Movies/Genres
 
 @app.route("/search", methods=["GET", "POST"])

@@ -37,40 +37,44 @@
         {% endif %}
 
         <hr>
-
-        {% for movie in movies %}
+        
         
         <div class="row">
-            <div class="col s12 center-align">
-                <h3>{{ movie.movie_name.title() }}</h3>
-            </div>
-            <div class="movie-img-container col s12 m6 center-align">
-                <!-- If Movie review has image supplied display this-->
-                {% if movie.image_url %}
-            
-                <img width="250" height="375" src="{{ movie.image_url }}" alt="Image of the movie being reviewed">
+        {% for movie in movies %}
+            <div class="col s12 m6 l4 xl4">
+                <div class="card large red">               
+                <h4 class="center-align">{{ movie.movie_name.title() }}</h4>                   
+                    <div class="movie-img-container center-align">
+                    <!-- If Movie review has image supplied display this-->
+                    {% if movie.image_url %}
                 
-                <!-- If no image url supplied display this default image -->
-                {% else %}
-                <img width="250" height="375" src="static/images/default-img.jpeg" 
+                    <a href="{{ url_for('review', movie_id=movie._id) }}"><img width="200" height="300" src="{{ movie.image_url }}" alt="Image of the movie being reviewed"></a>
+                    
+                    <!-- If no image url supplied display this default image -->
+                    {% else %}
+                    <img width="250" height="375" src="static/images/default-img.jpeg" 
                     alt="Image of an old camera reel">
-                {% endif %}
+                    {% endif %}
+                    </div>
+                    <p class="center-align"><strong>Review added by:</strong> <em>{{ movie.added_by }}</em></p>
+                </div> 
             </div>
-
+            <!---
             <div class="white-text text-shadow col s12 m6 center-align">
                 <p><strong>Movie Genre:</strong> {{ movie.category_name }}</p>
                 <p><strong>Movie Synopsis:</strong> {{ movie.movie_description }}</p>           
                 <p><strong> Movie Review:</strong> {{ movie.movie_review }}</p>
                 <p><strong>Review added by:</strong> <em>{{ movie.added_by }}</em></p>
                 <p><strong>Rating: </strong>{{ movie.rating }}/5</p>
-            </div>        
-        </div>
-        <hr>
-        
+            </div>   -->   
         {% endfor %}
+        </div>
+        
+        
 
     {% else %}
         <h3 class="red-text text-darken-4 center-align">Sorry No Results Found</h3>
     {% endif %}
 
 {% endblock %}
+   
