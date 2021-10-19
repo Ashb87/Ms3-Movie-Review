@@ -127,6 +127,15 @@ hr {
     color: white;
 }
 
+.movie-header{
+    padding-top: 25px;
+}
+
+.movie-card{
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
 /* --- Profile page --- */
 
 .profile-card{
