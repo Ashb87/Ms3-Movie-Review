@@ -68,9 +68,21 @@
     {% endif %}
 
     <!-- Allows user to delete their own profile -->
+
     <div class="center-align">
-        <a href="{{ url_for('delete_user') }}" class="btn btn-sm delete-btn hover">Delete <i
-            class="fas fa-trash-alt" aria-hidden="true"></i></a>
+        <a class="btn-small btn-delete modal-trigger" href="#modal1">Delete Account</a>
+        <!-- Modal Body -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h3>You sure you want to do that?</h3>
+                <h4>Unlike Arnie, it will not be back!</h4>
+                <p>Do you definitely want to delete your account?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close btn-cancel btn-small">Cancel</a>
+                <a href="{{ url_for('delete_user') }}" class="btn-small btn-delete center-align">Delete Account</a>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
