@@ -63,7 +63,12 @@ nav.custom-bg {
 /* --- Home Page --- */
 
 .home-bg{
-    background-image: url("../images/movie-img2.jpeg") center center;    
+    margin-top: 40px;
+    background-image: url("../images/hero-img4.jpeg");
+    background-size: 100% 100%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    height: 300px;
 }
 
 .video-container{
