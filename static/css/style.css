@@ -67,12 +67,13 @@ nav.custom-bg {
     background-image: url("../images/hero-img4.jpeg");
     background-size: 100% 100%;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 5px rgba(248, 246, 246, 0.5);
     height: 300px;
 }
 
 .video-container{
     border-radius: 5px;
+    margin-top: 30px;
     margin-bottom: 40px;
     box-shadow: 0px 0px 10px 5px rgba(248, 246, 246, 0.5);
 }
@@ -139,6 +140,7 @@ hr {
 .movie-card{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(173, 7, 7) ;
 }
 
 /* --- Profile page --- */
