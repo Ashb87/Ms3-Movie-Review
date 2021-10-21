@@ -25,4 +25,19 @@
             </div>
         </div>
     </section>
+
+    <div class="row">
+        <div class="col s12 center-align">
+            {% if session.user %}
+            <div class="center-align">
+                <a href="{{ url_for('add_movie') }}" class="btn btn-small btn-add hover">
+                    Add a Movie Review</a>
+            </div>
+            {% else %}
+            <h4 class="white-text">Log in to your account to add your own movie reviews</h4>
+            <a href="{{ url_for('login') }}" class="btn btn-small btn-add hover">
+                Login</a>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}

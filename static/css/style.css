@@ -1,11 +1,16 @@
-* {
+/* --- Fonts imported from google fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+*{    
+    padding:0;
+    border:0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
+  }
 body{
     min-height: 100vh;
     background-color: #022538;
+    font-family: "noto sans mono";
 }
 
 .text-shadow {
@@ -34,6 +39,32 @@ nav.custom-bg {
     backdrop-filter: blur(12px);
 }
 
+.sidenav{
+    background-color: #022538;
+    color: white;
+}
+
+.sidenav li a{
+    color: white;
+}
+
+/* --- Footer */
+
+.social-networks li {
+    display: inline;
+  }
+
+  .social-networks i {
+    font-size: 25px;
+    padding: 3px;
+    margin: 5px;
+  }
+
+.page-footer {
+    background-color: rgb(97, 96, 96);
+    margin-top: 30px;
+}
+
 /* --- Buttons --- */
 
 .btn-small {
@@ -41,7 +72,17 @@ nav.custom-bg {
     border-radius: 5px;
 }
 
-.btn-add {
+.btn-large {
+    border-radius: 5px;
+}
+
+.btn-large:hover {
+    background-color: rgb(97, 96, 96);
+}
+
+.btn-add,
+.btn-review,
+.btn-large {
     background-color: #03537e;
 }
 
@@ -56,8 +97,16 @@ nav.custom-bg {
 }
 
 .btn-small:hover{
-    background-color: black;
+    background-color: rgb(97, 96, 96);
     color: #fcbf49;
+}
+
+.btn-small,
+.btn-delete:hover{
+    color: #d3ab78;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 /* --- Home Page --- */
@@ -79,10 +128,14 @@ nav.custom-bg {
 }
 
 
-/* --- Add-Movie Page --- */
+/* --- Add/Edit-Movie Page --- */
 
-.add-movie-card {
-    background-color: #fcbf49;
+.add-movie-card,
+.edit-movie-card {
+    background-image: linear-gradient(#fcbf49, #f7df07);
+    /*background-color: #fcbf49;*/
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 5px rgba(248, 246, 246, 0.5);
 }
 
 /* --- Star Rating --- */
@@ -99,7 +152,7 @@ input[name=rating] {
     color: #d62828;
   }
 .rating-stars input:checked~label {
-    color: white ;
+    color: rgb(182, 181, 181) ;
   }
 
 
@@ -148,7 +201,7 @@ hr {
 .profile-card{
     border-radius: 5px;
     background-color: #fcbf49;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 5px rgba(248, 246, 246, 0.5);
     margin-top: 40px;
 }
 
@@ -157,6 +210,7 @@ hr {
 @media screen and (max-width: 992px){
 nav .brand-logo{
     margin-left: 0;
+    font-size: 1.8rem;
     }
 }
 

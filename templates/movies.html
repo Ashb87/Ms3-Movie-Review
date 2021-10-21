@@ -30,7 +30,7 @@
         {% if session.user %}
         <div class="row center-align">
             <div class="col-10 offset-1 col-md-4 offset-md-4">
-                <a href="{{ url_for('add_movie') }}" class="btn btn-large hover">
+                <a href="{{ url_for('add_movie') }}" class="btn btn-add btn-small">
                 <i class="fas fa-plus" aria-hidden="true"></i> Add a Movie Review</a>
             </div>
         </div>
@@ -43,7 +43,7 @@
         {% for movie in movies %}
             <div class="col s12 m6 l4">
                 <div class="card large movie-card">               
-                <h4 class="movie-header center-align">{{ movie.movie_name.title() }}</h4>                   
+                <h5 class="movie-header center-align">{{ movie.movie_name.title() }}</h5>                   
                     <div class="movie-img-container center-align">
                     <!-- If Movie review has image supplied display this-->
                     {% if movie.image_url %}
@@ -58,7 +58,7 @@
                     </div>
                     <p class="center-align"><strong>Review added by:</strong> <em>{{ movie.added_by }}</em></p>
                     <div class="row center-align">
-                    <a href="{{ url_for('review', movie_id=movie._id) }}" class="btn-small">Full review</a>
+                    <a href="{{ url_for('review', movie_id=movie._id) }}" class="btn-small btn-review">Full review</a>
                     </div>
                 </div> 
             </div>
