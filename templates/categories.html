@@ -5,8 +5,8 @@
 
     <div class="row">
         <div class="col s12 center-align">
-            <a href="{{ url_for('add_category') }}" class="btn-large text-shadow">
-                Add Category <i class="fas fa-plus-square right"></i>
+            <a href="{{ url_for('add_category') }}" class="btn-large btn-add text-shadow">
+                Add Genre <i class="fas fa-plus-square right"></i>
             </a>
         </div>
     </div>
@@ -14,14 +14,26 @@
     <div class="row">
         {% for category in categories %}
             <div class="col s12 m3">
-                <div class="card light-blue darken-4 text-shadow center-align">
+                <div class="card genre-card text-shadow center-align">
                     <div class="card-content white-text">
                         <span class="card-title">{{ category.category_name }}</span>
                     </div>
-                    <div class="card-action">
+                    <div>
                         <a href="{{ url_for('edit_category', category_id=category._id) }}" 
-                            class="btn green accent-4">Edit</a>
-                        <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn light-blue lighten-1">Delete</a>
+                            class="btn-small btn-edit black-text">Edit</a>
+                        <a class="btn-small btn-delete modal-trigger" href="#modal1">Delete</a>
+                        <!-- Modal Body -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                <h3>You sure you want to do that?</h3>
+                                
+                                <p>Do you definitely want to delete this genre?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close black-text btn-cancel btn-small">Cancel</a>
+                                <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn-small btn-delete center-align">Delete</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

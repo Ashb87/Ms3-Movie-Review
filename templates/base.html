@@ -31,7 +31,7 @@
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('movies') }}">Movies</a></li>
                         {% if session.user|lower == "admin"|lower %}
-                            <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                            <li><a href="{{ url_for('get_categories') }}">Manage Genres</a></li>
                         {% endif %}
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
@@ -51,7 +51,7 @@
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('movies') }}">Movies</a></li>
                 {% if session.user|lower == "admin"|lower %}
-                    <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                    <li><a href="{{ url_for('get_categories') }}">Manage Genres</a></li>
                 {% endif %}
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
@@ -85,10 +85,10 @@
                 <div class="col s12 center-align">
                     <ul class="social-networks">
                         <li>Follow Us</li>
-                        <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/alkalinetrio/" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://twitter.com/alkaline_trio?lang=en" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/channel/UCHg7MjK4m_-2MTXFr2YQSLA" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a></li>
-                        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/alkaline_trio/?hl=en" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>                         
+                        <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>                         
                     </ul>
                 </div>
                 <div class="col m5 s12">

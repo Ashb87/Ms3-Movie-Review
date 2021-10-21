@@ -43,7 +43,7 @@
         {% for movie in movies %}
             <div class="col s12 m6 l4">
                 <div class="card large movie-card">               
-                <h5 class="movie-header center-align">{{ movie.movie_name.title() }}</h5>                   
+                <h5 class="text-shadow movie-header center-align">{{ movie.movie_name.title() }}</h5>                   
                     <div class="movie-img-container center-align">
                     <!-- If Movie review has image supplied display this-->
                     {% if movie.image_url %}

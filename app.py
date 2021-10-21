@@ -224,7 +224,7 @@ def edit_category(category_id):
 def delete_category(category_id):
     """ Allows the admin to delete different genres from the category selection """ 
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash("Category Successfully Deleted")
+    flash("Genre Successfully Deleted")
     return redirect(url_for("get_categories"))
 
 

@@ -25,7 +25,7 @@
         
         {% for movie in movies %}
             <div class="col s12 m4 center-align">
-                <h4>{{ movie.movie_name.title() }}</h4>
+                <h4 class="movie-title">{{ movie.movie_name.title() }}</h4>
                 
                 <div class="movie-img-container center-align">
                     <!-- If Movie review has image supplied display this-->
@@ -68,21 +68,22 @@
     {% endif %}
 
     <!-- Allows user to delete their own profile -->
-
+    
     <div class="center-align">
         <a class="btn-small btn-delete modal-trigger" href="#modal1">Delete Account</a>
         <!-- Modal Body -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h3>You sure you want to do that?</h3>
-                <h4>Unlike Arnie, it will not be back!</h4>
+                <h3>Please don't go!</h3>
+                <h4>We'll miss you</h4>
                 <p>Do you definitely want to delete your account?</p>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close btn-cancel btn-small">Cancel</a>
+                <a href="#!" class="modal-close black-text btn-cancel btn-small">Cancel</a>
                 <a href="{{ url_for('delete_user') }}" class="btn-small btn-delete center-align">Delete Account</a>
             </div>
         </div>
     </div>
+    
 
 {% endblock %}
