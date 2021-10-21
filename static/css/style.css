@@ -1,5 +1,5 @@
 /* --- Fonts imported from google fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Mono:wght@300&display=swap');
 
 *{    
     padding:0;
@@ -15,6 +15,18 @@ body{
 
 .text-shadow {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Headings --- */
+
+h3,
+h4 {
+    font-family: "bebas neue";
+    color:rgb(182, 181, 181);
+}
+
+.username {
+    color: black;
 }
 
 /* --- Nav Bar --- */
@@ -149,6 +161,10 @@ nav.custom-bg {
     box-shadow: 0px 0px 10px 5px rgba(248, 246, 246, 0.5);
 }
 
+.validate{
+    color: white;
+}
+
 /* --- Star Rating --- */
 
 label,
@@ -199,6 +215,7 @@ hr {
 
 .movie-header{
     padding-top: 25px;
+    color: rgb(182, 181, 181);
 }
 
 .movie-card{
@@ -238,6 +255,3 @@ nav .brand-logo{
     }
 }
 
-.validate{
-    color: white;
-}
