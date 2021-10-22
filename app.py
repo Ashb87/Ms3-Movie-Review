@@ -187,7 +187,7 @@ def edit_movie(movie_id):
 def delete_movie(movie_id):
     mongo.db.movies.remove({"_id": ObjectId(movie_id)})
     flash("Your review has been Successfully Deleted")
-    return redirect(url_for("movies"))
+    return redirect(url_for('profile', username=session['user']))
 
 
 @app.route("/get_categories")
