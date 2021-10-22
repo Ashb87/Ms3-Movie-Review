@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align white-text">Edit Movie Genre</h3>
+    <h3 class="center-align">Edit Movie Genre</h3>
 
     <div class="row">
         <form class="col s12 m10 offset-m1" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
-            <div class="card-panel add-movie-card">
+            <div class="card-panel">
                 <!-- Genre Name -->
                 <div class="row">
                     <div class="input-field col s12">

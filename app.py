@@ -135,7 +135,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-# ------- Add Movie function
+# ------- Add Movie review function
 
 @app.route("/add_movie", methods=["GET", "POST"])
 def add_movie():
@@ -151,12 +151,14 @@ def add_movie():
             "added_by": session["user"]
         }
         mongo.db.movies.insert_one(movie)
-        flash("Movie Successfully Added")
+        flash("Movie Review Successfully Added")
         return redirect(url_for("movies"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_movie.html", categories=categories)
 
+
+# ------- Edit Movie review function
 
 @app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
 def edit_movie(movie_id):
@@ -178,6 +180,8 @@ def edit_movie(movie_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_movie.html", movie=movie, categories=categories)
 
+
+# ------- Delete Movie review
 
 @app.route("/delete_movie/<movie_id>")
 def delete_movie(movie_id):
@@ -222,7 +226,6 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
-    """ Allows the admin to delete different genres from the category selection """ 
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Genre Successfully Deleted")
     return redirect(url_for("get_categories"))
