@@ -61,20 +61,10 @@
                     <a href="{{ url_for('review', movie_id=movie._id) }}" class="btn-small btn-review">Full review</a>
                     </div>
                 </div> 
-            </div>
-            <!---
-            <div class="white-text text-shadow col s12 m6 center-align">
-                <p><strong>Movie Genre:</strong> {{ movie.category_name }}</p>
-                <p><strong>Movie Synopsis:</strong> {{ movie.movie_description }}</p>           
-                <p><strong> Movie Review:</strong> {{ movie.movie_review }}</p>
-                <p><strong>Review added by:</strong> <em>{{ movie.added_by }}</em></p>
-                <p><strong>Rating: </strong>{{ movie.rating }}/5</p>
-            </div>   -->   
+            </div>   
         {% endfor %}
         </div>
         
-        
-
     {% else %}
         <h3 class="red-text text-darken-4 center-align">Sorry No Results Found</h3>
     {% endif %}

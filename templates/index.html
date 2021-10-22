@@ -5,9 +5,19 @@
         <div class="col s12">
             <div class="card-panel home-bg">
                 <h3 class="center-align">
-                    Are you a movie lover? 
+                    Love Movies? 
                 </h3>
+                <h6 class="center-align white-text">
+                    Share it here for all to see by adding reviews for all your favourite <em>(or least favourite)</em> movies!  
+                </h6>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 center-align">
+            <p class="white-text text-shadow">Simply create an account to add your reviews for a movie.<br> Or use it to find reviews added by other movie lovers.
+            </p>
         </div>
     </div>
 
@@ -37,6 +47,8 @@
             <h4>Log in to your account to add your own movie reviews</h4>
             <a href="{{ url_for('login') }}" class="btn btn-small btn-add hover">
                 Login</a>
+            <h6 class="white-text">Not yet registered an account?</h6>
+            <a href="{{ url_for('register') }}" class="btn btn-small btn-add hover">Register</a>
             {% endif %}
         </div>
     </div>
