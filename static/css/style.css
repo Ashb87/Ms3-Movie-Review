@@ -176,15 +176,13 @@ nav.custom-bg {
 
 .add-movie-card,
 .edit-movie-card {
-    background-image: linear-gradient(#fcbf49, #f7df07);
-    /*background-color: #fcbf49;*/
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 5px rgba(248, 246, 246, 0.5);
+    box-shadow: 0px 0px 20px 5px rgba(139, 139, 139, 0.5);
 }
 
-.validate{
+/*.validate{
     color: white;
-}
+}*/
 
 /* Star Rating */
 
