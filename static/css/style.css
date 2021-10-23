@@ -1,5 +1,5 @@
 /* --- Fonts imported from google fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Mono:wght@300&family=Ubuntu&display=swap');
 
 *{    
     padding:0;
@@ -10,7 +10,7 @@
 body{
     min-height: 100vh;
     background-color: #022538;
-    font-family: "noto sans mono";
+    font-family: "ubuntu";
 }
 
 .text-shadow {
@@ -278,4 +278,9 @@ nav .brand-logo{
 .flash-card{
     width: 80%;
     }
+}
+
+
+.input-field label {
+    color: black;
 }
