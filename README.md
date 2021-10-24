@@ -104,3 +104,11 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
   * ### Add/Edit Movie Page
     * For the add movie page a form is displayed for the use to fill out. There is a dropdown option for the user to pick a genre. They will then need to fill in the movie name, movie synopsis, and their review of the movie. They will then have the option to add an image url and finally pick a star rating out of 5. Once all filled in they can then click the add movie buton and their review will appear on the movie page.
     * For the edit movie page it will be the same as above with the input fields already filled with previously given information. They can then change what they like on the review and click *confirm edit* or cancel their changes by clicking on the *cancel changes* button. 
+
+## Features to implement in the future
+To take this site further, with more knowledge and time there would be a few elements I would like to add to the project.
+  * Allow user to add a profile image to their account.
+  * Allow the user to edit their username or password
+  * Allow more than one Admin by not just using the Admin username.
+  * Using emailJS give the user the option to signup to a news letter and recieve emails relevant to the site.
+  * Allow any user to add a further review to any already added on the site.
