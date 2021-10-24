@@ -57,4 +57,8 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
   * #### Imagery
 
   For the design of the site I have only used two images. Both quite small and only used as background images. One for the home page and one on the movie review page. For the home page it is used as the hero image and is a picture of red theatre/movie curtains. Set as a backdrop for some text. For the review page the image is used as the background for the search bar where the user can search for a movie title or genre. It has a backdrop filter over the picture to make the text stand out more making it easier for the user to read. <br>
-  As well as these two images the user also has the option to add an image url so they can add a picture to their review. These are all set to a matching size with the same border radius, so that with every review added they all look the same. If the user doesnt add their own image then I have a default image set to be inserted instead, again with a matching size and border radius. 
+  As well as these two images the user also has the option to add an image url so they can add a picture to their review. These are all set to a matching size with the same border radius, so that with every review added they all look the same and sit uniformly on the page. If the user doesn't add their own image then I have a default image set to be inserted instead, again with a matching size and border radius. 
+
+  * #### Color scheme
+
+  For the colors on my project I first went to [coolors.co](https://coolors.co/)
