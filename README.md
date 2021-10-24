@@ -111,4 +111,48 @@ To take this site further, with more knowledge and time there would be a few ele
   * Allow the user to edit their username or password
   * Allow more than one Admin by not just using the Admin username.
   * Using emailJS give the user the option to signup to a news letter and recieve emails relevant to the site.
-  * Allow any user to add a further review to any already added on the site.
+  * Allow any user to add a further review to any review already added on the site.
+  * limit how many reviews are displayed on a page before user can click to go to a next page rather than keep scrolling. 
+
+## Technologies used
+
+### Languages used
+
+  * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) <br>
+  * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) <br>
+  * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) <br>
+  * [Python](https://www.python.org/)
+
+### Frameworks, Libraries and Programs Used
+
+  * [Materialize](https://materializecss.com/)<br>
+    Materialize was used to help build the structure of the website and add responsiveness across different screen sizes.
+    It also supplied some styling and built in components such as the modal.
+  * [Balsamiq](https://balsamiq.com/) <br>
+     I used balsamiq to design and draw up my wireframes before starting the project.
+  * [Google Fonts](https://fonts.google.com/) <br>
+     Google fonts was used throughout the project to import my selected fonts.
+  * [Font Awesome](https://fontawesome.com/) <br>
+      Font awesome was used to add all icons used on the site.
+  * [Gitpod](https://www.gitpod.io/) <br>
+     Gitpod was the text editor I used for this project.
+  * [Git](https://git-scm.com/) <br>
+     Git is used as version control software to add, commit and push code to my GitHub repository where the code is then stored.
+  * [GitHub](https://github.com/) <br>
+     I have used GitHub as a remote repository to push and store the committed changes to my project from Git.
+  * [jQuery](https://jquery.com/) <br>
+     jQuery was used to initialize Materialize and for some of the sites functionality.
+  * [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) <br>
+     I have used Google chromes built in developer tools to help with the styling of the site, selecting colors and to help fix any bugs I found.
+  * [Heroku](https://id.heroku.com) <br>
+     Heroku has been used to deploy my live site.
+  * [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) <br>
+     Flask was used as the web framework for the application.
+  * [MongoDB](https://www.mongodb.com/)
+     MongoDB was used to hold the database for my project.
+  * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) <br>
+     Werkzeug was used for password hashing and authentication.
+  * [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) <br>
+     Jinja templating language was used to simplify and display backend data in HTML.
+  * [coolors.co](https://coolors.co/) <br>
+     Coolors was used. to help find the color palette I wanted for my project.
