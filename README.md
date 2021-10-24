@@ -81,26 +81,26 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
     * If user is logged out there is a button under the video that links the user to the login page or if not yet registered then they can link to the register page. If logged in they will instead have the option to add a movie review.
     
 
-  ### Login/Register Page
-    * For the register page the user will be required to create a username with a minimum of 5 characters. And then a password, again minimum of 5 characters. They will need to add the password twice for extra security with the *register* button being disabled until they match.
+  * ### Login/Register Page
+    * For the register page the user will be required to create a username with a minimum of 5 characters. And then a password, again minimum of 5 characters. They will need to add the password twice for extra security with the register button being disabled until they match.
     * For the login page they will be required to input their username and password.
     * For both the login and registered pages a flash message will be displayed when user is successful in loggin in or registering.
 
-  ### Movie Page
+  * ### Movie Page
     * At the top of the page there is a search bar where the user can look for a movie either by its name or genre.
     * For users not logged in there is a button giving them the option to log in allowing them to add a review.
     * For logged in users this buttin becomes an *add movie button* linking them to the add movie form.
     * Each review already added is then displayd underneath. showing the name of the movie, an image, if provided and who created the review. Within each movie card is a button linking the user to the full review of that specific movie. If they are not logged in they will be prompted to do so before viewing the full review.
 
-  ### Full Review Page 
+  * ### Full Review Page 
     * On this page the user can see the film title with an image card if provided. Then they will be able to see the genre, a movie synopsis, the users review, a rating out of 5 and who the review was added by.
     * A link back to the movie page.
 
-  ### Profile Page
+  * ### Profile Page
     * A card panel at the top with the users username displayed and a button that links to the add movie review form.
     * If the user has no reviews there will be a heading saying no reviews yet. Otherwise their reviews will be displayed below, showing the movie title, the image provided or default image and then two buttons. One linking them to the edit review page. The other is delete review button. If they click this they will be prompted my a modal to either confirm or canel their choice to delete the review.
     * At the bottom below their reviews they will have the option to delete their account. Again prompted by a modal to confirm oor cancel their decision.
 
-  ### Add/Edit Movie Page
+  * ### Add/Edit Movie Page
     * For the add movie page a form is displayed for the use to fill out. There is a dropdown option for the user to pick a genre. They will then need to fill in the movie name, movie synopsis, and their review of the movie. They will then have the option to add an image url and finally pick a star rating out of 5. Once all filled in they can then click the add movie buton and their review will appear on the movie page.
     * For the edit movie page it will be the same as above with the input fields already filled with previously given information. They can then change what they like on the review and click *confirm edit* or cancel their changes by clicking on the *cancel changes* button. 
