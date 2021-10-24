@@ -74,6 +74,7 @@ nav.custom-bg {
     font-size: 25px;
     padding: 3px;
     margin: 5px;
+    color: #fcbf49
   }
 
 .page-footer {
@@ -109,7 +110,7 @@ nav.custom-bg {
 }
 
 .btn-delete {
-    background-color: rgb(207, 4, 4);
+    background-color: #ad0707;
 }
 
 .btn-small:hover{
@@ -133,7 +134,7 @@ nav.custom-bg {
     margin-top: 20px;
     padding: 3px;
     border-radius: 15px;
-    background-color: rgb(173, 7, 7);
+    background-color: #ad0707;
     box-shadow: 0px 0px 10px 5px rgba(248, 246, 246, 0.5);
 }
 
@@ -195,7 +196,7 @@ input[name=rating] {
   }
 .rating-stars label {
     font-size: 20px;
-    color: #d62828;
+    color: #ad0707;
   }
 .rating-stars input:checked~label {
     color: rgb(182, 181, 181) ;
@@ -212,7 +213,7 @@ input[name=rating] {
 hr {
     width: 40%;
     border: none;
-    border-bottom: 3px solid #d62828;
+    border-bottom: 3px solid #ad0707;
     padding: 20px;
 }
 
@@ -240,7 +241,7 @@ hr {
 .movie-card{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    background-color: rgb(173, 7, 7) ;
+    background-color: #ad0707;
 }
 
 /* --- Profile page --- */
@@ -256,7 +257,7 @@ hr {
 
 .login-card,
 .register-card {
-    background-color: rgb(173, 7, 7);
+    background-color: #ad0707;
     border-radius: 5px;
 }
 
