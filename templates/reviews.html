@@ -28,6 +28,15 @@
         </div>
         <hr>
 
+        <!-- Allows admin to delete review -->
+        <div class="row">
+            <div class="col s12 center-align">
+                {% if session.user|lower == "admin"|lower %}
+                <a href="{{ url_for('delete_movie', movie_id=review._id) }}" class="btn btn-delete btn-small">Delete Review</a>
+                {% endif %}
+            </div>
+        </div>
+        <!-- Takes user back to movie page -->
         <div class="row">
             <div class="col s12 center-align">
                 <a href="{{ url_for('movies') }}" class="btn btn-add btn-small">Back to movies</a>
