@@ -105,6 +105,10 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
     * For the add movie page a form is displayed for the use to fill out. There is a dropdown option for the user to pick a genre. They will then need to fill in the movie name, movie synopsis, and their review of the movie. They will then have the option to add an image url and finally pick a star rating out of 5. Once all filled in they can then click the add movie buton and their review will appear on the movie page.
     * For the edit movie page it will be the same as above with the input fields already filled with previously given information. They can then change what they like on the review and click *confirm edit* or cancel their changes by clicking on the *cancel changes* button. 
 
+  * ### Features for Admin
+    * When user is logged in as Admin they will have the added option on their menu to manage genres. From here they will be able to add new ones, edit or delete exisiting ones.
+    * Admin will also have the ability to delete any review posted by any user if they feel it is necessary.  
+
 ## Features to implement in the future
 To take this site further, with more knowledge and time there would be a few elements I would like to add to the project.
   * Allow user to add a profile image to their account.
