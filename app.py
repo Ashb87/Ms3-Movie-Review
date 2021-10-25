@@ -249,6 +249,8 @@ def delete_user():
     return redirect(url_for("home"))
 
 
+# ------- Error Handlers
+
 @app.errorhandler(404)
 def page_not_found(error):
     """ 404 error handling from flask documentation """
