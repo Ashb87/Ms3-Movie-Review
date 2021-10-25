@@ -291,6 +291,11 @@ hr {
     border-radius: 10px;
 }
 
+.genre-add,
+.genre-edit {
+    background-color: #78909c;
+}
+
 /* --- Media Query --- */
 
 @media screen and (max-width: 992px){
