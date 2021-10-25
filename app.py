@@ -169,7 +169,7 @@ def edit_movie(movie_id):
         return render_template("error_pages/404.html")
     if movie['added_by'] != session['user'] or session['user'] == 'Admin':
         return render_template("error_pages/404.html")
-    if request.method == "POST":     
+    if request.method == "POST":    
         submit = {
             "category_name": request.form.get("category_name"),
             "movie_name": request.form.get("movie_name"),
@@ -182,9 +182,12 @@ def edit_movie(movie_id):
         }
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
         flash("Movie Review Successfully Updated")
+        return redirect(url_for(
+            "profile", username=session["user"]))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_movie.html", movie=movie, categories=categories)
+    return render_template(
+        "edit_movie.html", movie=movie, categories=categories)
 
 
 # ------- Delete Movie review
