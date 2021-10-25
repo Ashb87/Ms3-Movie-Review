@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
+    
     <div class="row">
         <div class="col s12">
             <div class="card-panel home-bg">
-                <h3 class="center-align">
-                    Love Movies? 
-                </h3>
-                <h5 class="center-align white-text">
-                    Share it here for all to see by adding reviews for all your favourite <em>(or least favourite)</em> movies!  
-                </h5>
+                <h1 class="center-align text-shadow">
+                    Love The Big Screen? 
+                </h1>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col s12 center-align">
-            <h5 class="white-text text-shadow">Simply create an account to add your reviews.<br> Or use it to find reviews added by other movie lovers.
+        <div class="col s12 m10 offset-m1 center-align">
+            <h5 class="home-text text-shadow">Movie Catalog is the place for all movie lovers to share their favourites, 
+                give reviews and find great classics added by others.
             </h5>
+            <h6 class ="home-text text-shadow">
+                Simply create a profile to add your movies and keep all your favourites in one place!
+            </h6>
         </div>
     </div>
 
@@ -25,6 +27,7 @@
         The Movie Everyone's Talking About...
     </h3>
 
+    <!-- embedded code from youtube to display movie trailer -->
     <section>
         <div class="row">
             <div class="col s12 m10 offset-m1">
@@ -36,6 +39,7 @@
         </div>
     </section>
 
+    <!-- Allows user to either login/register or add a movie if already signed in-->
     <div class="row">
         <div class="col s12 center-align">
             {% if session.user %}
