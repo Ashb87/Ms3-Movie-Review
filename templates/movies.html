@@ -31,13 +31,13 @@
         <div class="row center-align">
             <div class="col-10 offset-1 col-md-4 offset-md-4">
                 <a href="{{ url_for('add_movie') }}" class="btn btn-add btn-small">
-                <i class="fas fa-plus" aria-hidden="true"></i> Add a Movie Review</a>
+                <i class="fas fa-plus" aria-hidden="true"></i> Add a Movie</a>
             </div>
         </div>
         {% else %}
         <div class="row center-align">
             <div class="col-10 offset-1 col-md-4 offset-md-4">
-                <h6 class="white-text">Log in to add a movie review of your own</h6>
+                <h6 class="white-text">Log in to add a movie of your own</h6>
                 <a href="{{ url_for('login') }}" class="btn btn-add btn-small">
                 Login</a>
             </div>
@@ -64,9 +64,9 @@
                     alt="Image of an old camera reel">
                     {% endif %}
                     </div>
-                    <p class="center-align"><strong>Review added by:</strong> <em>{{ movie.added_by }}</em></p>
+                    <p class="center-align"><strong>Movie added by:</strong> <em>{{ movie.added_by }}</em></p>
                     <div class="row center-align">
-                    <a href="{{ url_for('review', movie_id=movie._id) }}" class="btn-small btn-review">Full review</a>
+                    <a href="{{ url_for('review', movie_id=movie._id) }}" class="btn-small btn-review">Users review</a>
                     </div>
                 </div> 
             </div>   

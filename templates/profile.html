@@ -9,7 +9,7 @@
                 </h3>
                 <div class="center-align">
                     <a href="{{ url_for('add_movie') }}" class="btn btn-small btn-add hover">
-                        Add a Movie Review</a>
+                        Add a Movie</a>
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
 
     {% if movies|length > 0 %}
         <h3 class="center-align">
-            My reviews
+            My Movies
         </h3>
 
         <!-- display users own reviews on their profile page-->
@@ -43,19 +43,19 @@
                 <div class="center-align">
                     {% if session.user|lower == movie.added_by|lower %}
                         <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" 
-                            class="black-text btn-small btn-edit">Edit Review</a>
+                            class="black-text btn-small btn-edit">Edit Movie</a>
                         <!-- Modal link to give user the option to cancel deleting their review-->
-                        <a class="btn-small btn-delete modal-trigger" href="#{{ url_for('delete_movie', movie_id=movie._id) }}">Delete Review</a>
+                        <a class="btn-small btn-delete modal-trigger" href="#{{ url_for('delete_movie', movie_id=movie._id) }}">Delete Movie</a>
                         <!-- Modal Body -->
                         <div id="{{ url_for('delete_movie', movie_id=movie._id) }}" class="modal">
                             <div class="modal-content">
                                 <h3>You sure you want to do that?</h3>
                                 <h4>Unlike Arnie, it will not be back!</h4>
-                                <p>Do you definitely want to delete your review for {{ movie.movie_name }}?</p>
+                                <p>Do you definitely want to delete your movie {{ movie.movie_name }}?</p>
                             </div>
                             <div class="modal-footer">
                                 <a href="#!" class="modal-close black-text btn-cancel btn-small">Cancel</a>
-                                <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn-small btn-delete center-align">Delete Review</a>
+                                <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn-small btn-delete center-align">Delete Movie</a>
                             </div>
                         </div>
                     {% endif %}
@@ -64,7 +64,7 @@
         {% endfor %}
         </div>
     {% else %}
-        <h3 class="center-align">You have no reviews yet</h3>
+        <h3 class="center-align">You haven't added any movies yet</h3>
     {% endif %}
 
     <!-- Allows user to delete their own profile -->

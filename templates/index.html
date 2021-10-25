@@ -41,13 +41,13 @@
             {% if session.user %}
             <div class="center-align">
                 <a href="{{ url_for('add_movie') }}" class="btn btn-small btn-add hover">
-                    Add a Movie Review</a>
+                    Add a Movie</a>
             </div>
             {% else %}
-            <h4>Log in to your account to add your own movie reviews</h4>
+            <h4>Log in to your account to add your own movies to the catalog</h4>
             <a href="{{ url_for('login') }}" class="btn btn-small btn-add hover">
                 Login</a>
-            <h6 class="white-text">Not yet registered an account?</h6>
+            <h6 class="white-text">Not yet got an account?</h6>
             <a href="{{ url_for('register') }}" class="btn btn-small btn-add hover">Register</a>
             {% endif %}
         </div>
