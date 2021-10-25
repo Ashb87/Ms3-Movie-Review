@@ -141,16 +141,12 @@ nav.custom-bg {
 
 /* --- Modal --- */
 
-.modal-content h3 {
-    font-family: "noto sans mono";
-}
-
 .modal {
     background-color: #03537e;
 }
 
 .modal .modal-footer {
-    background-color: #022538;
+    background-color: #03537e;
 }
 
 /* --- Home Page --- */
@@ -182,9 +178,9 @@ nav.custom-bg {
     box-shadow: 0px 0px 20px 5px rgba(139, 139, 139, 0.5);
 }
 
-/*.validate{
-    color: white;
-}*/
+.input-field label {
+    color: black;
+}
 
 /* Star Rating */
 
