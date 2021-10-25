@@ -162,7 +162,14 @@ def add_movie():
 
 @app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
 def edit_movie(movie_id):
-    if request.method == "POST":
+    movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+    if 'user' not in session:
+        return render_template("error_pages/404.html")
+    if not movie:
+        return render_template("error_pages/404.html")
+    if movie['added_by'] != session['user'] or session['user'] == 'Admin':
+        return render_template("error_pages/404.html")
+    if request.method == "POST":     
         submit = {
             "category_name": request.form.get("category_name"),
             "movie_name": request.form.get("movie_name"),
@@ -176,7 +183,6 @@ def edit_movie(movie_id):
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
         flash("Movie Review Successfully Updated")
 
-    movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_movie.html", movie=movie, categories=categories)
 
@@ -241,6 +247,18 @@ def delete_user():
     session.pop("user")
     flash("Account Successfully Deleted, We're sorry to see you go.")
     return redirect(url_for("home"))
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    """ 404 error handling from flask documentation """
+    return render_template('404.html', error=error), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    """ 500 error handling from flask documentation """
+    return render_template('error_pages/500.html', error=error), 500
 
 
 if __name__ == "__main__":
