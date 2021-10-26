@@ -394,7 +394,23 @@ As well as using the chrome dev tools I also tested the site myself across as ma
 
 When I felt the site was close to being complete I used the mockup screenshot generator **am I responsive** to get an image of the homepage across different size devices and have used this image at the top of this README file.
 
-## HTML and CSS Validator
+## Code Validators
+
+### HTML validation
+
+### CSS validation
+
+  - To test my CSS code I used the [W3C CSS Validator Tool](https://jigsaw.w3.org/css-validator/) <br>
+  <img src="static/images/screenshots/css.png" width="450" height="300">  <br>
+
+  - There were no issues found in the css code
+
+### Pep8 validation
+
+  - To test my python code I used the [pep8 validator](http://pep8online.com/) <br>
+  <img src="static/images/screenshots/pep8.png" width="450" height="300">  <br>
+
+  - No issues found with pep8 validator
 
 ##
 
