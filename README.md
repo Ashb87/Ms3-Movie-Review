@@ -15,7 +15,7 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
 
   1. I want the site to be attractive, responsive and easy to navigate for the user.
   2. I want the purpose of the site to be clear to the user
-  3. I want the user to be able to create, edit and delete their own reviews.
+  3. I want the user to be able to create, edit and delete their own movies.
   4. I want their to be an admin account where they can edit, delete and add new genres.
   5. I want the user to be able to register an account, login, logout and delete it if they wish. 
 
@@ -64,7 +64,7 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
   For the colors on my project I first went to [coolors.co](https://coolors.co/) to use their palette generator. I had an idea of wanting to use a dark blue for the majority of my site and so used the generator to find colors that would match up well. From this I found a palette that hard a dark blue, a shade of red and a yellow. From here I then used the google color picker to fine tune the exact shades of each color I wanted. I thinkthe colors all work really well together and give the look I was going for to suit the movie feel of the site.<br>
   For a contrast I used a grey for the footer of the site and also for some of the headings across the different pages. This gives the footer more of a distinctive look and differentiates it from the rest of the site. Whilst also sitting nicely against the dark blue.
 
-  <img src="static/images/colors.png" width="450" height="200"> 
+  <img src="static/images/screenshots/colors.png" width="450" height="200"> 
 
   * #### Typography
 
@@ -160,3 +160,77 @@ To take this site further, with more knowledge and time there would be a few ele
      Jinja templating language was used to simplify and display backend data in HTML.
   * [coolors.co](https://coolors.co/) <br>
      Coolors was used. to help find the color palette I wanted for my project.
+
+## Testing
+
+### Testing User Stories and Site Goals
+
+  **1. I want the site to be attractive, responsive and easy to navigate for the user.**
+
+  - To get feedback on the visual aspect of the project it has been shared with many friends and family and also other students of code institute via the slack portal. The feedback on the visual aspect has been really good with the choice of colors recieving positive reviews and many saying it has a good movie vibe to the look of the site.
+  - I have tested the site on many differnet screen sizes, including, Iphone Xr, Iphone 12, Ipad mini, Samsung Galaxy tablet, Macbook air and IMac desktop.
+  The site responds well to the different screen sizes and the layout adapts as intended. Using the materialize grid system as well as some custom styling has helped to achieve this. 
+  - The navigation for the site has a clear and simple layout making it easy for the user to navigate through the different pages. With contrasting colours making all the different features clear and visible for the user to see.
+  There are also many buttons placed on the different pages to help the user navigate around quicker rather than having to use the navbar or clicking on the back button everytime. 
+
+  **2. I want the purpose of the site to be clear to the user**
+
+  - When the user first sees the home page there is a hero image with a simple heading of *Love the big screen?* With some further text underneath explaining what the movie catalog is for. I think this gives a claer intention for the site. Across the pages there are further images displaying movie cards which help add to the feel of a movie site. 
+
+  <img src="static/images/screenshots/hero-img.png" width="450" height="200"> <br>
+  <img src="static/images/screenshots/movie-card.png" width="450" height="200"> 
+
+  **3. I want the user to be able to create, edit and delete their own movies.**
+
+  - When the user has created an account and is signed in they will then have the option to add their own movie and review.
+  If they are not logged in they will be prompted to do so before being able to add a movie. <br>
+
+  <img src="static/images/screenshots/login-to-add.png" width="450" height="200"> <br>
+
+  - When they are logged in they can click the *add movie* link and will be taken to the add movie form page. <br>
+
+  <img src="static/images/screenshots/add-movie.png" width="450" height="300"> <br>
+
+  From here they can add all the required fileds and add an optional image url and then click the add movie button. When submitted the mobvie will appear on the movies page along with all other added movies. <br>
+
+  <img src="static/images/screenshots/movie-card.png" width="450" height="200">  <br>
+
+  From these movie cards a user can either click on the image or the button to link them to the full information/review of that specific movie They do not need to be logged in to do this. <br>
+
+  <img src="static/images/screenshots/full-movie.png" width="450" height="200">  <br>
+
+  When a user is logged in they will be able to go to their profile page and see all movies they have already added. From here they will have the option to either edit or delete each specific movie. If they wish to edit the information they have provided they can click thebedit button and they will be directed to the edit movie form. This form will already be filled out with the information they had previously given. They can change any field they like and then click the confirm edit button and the new changes will be saved to the database and displayed on screen. With a flash message telling the user they have successfully edited their movie. <br>
+
+  <img src="static/images/screenshots/my-movies.png" width="450" height="200">  <br>
+  <img src="static/images/screenshots/edit-movie.png" width="450" height="250">  <br>
+  <img src="static/images/screenshots/edit-flash.png" width="450" height="200">  <br>
+
+  If the users wishes to delete a movie from their profile they can click the delete movie button. Doin so will display a modal asking the user if they definitely want to delete that movie. They can cancel or confirm in the modal. If they delete it they will have a flash message telling them they have successfully deleted their movie. <br>
+
+  <img src="static/images/screenshots/delete-movie-modal.png" width="450" height="200">  <br>
+
+  After lots of testing on differnet profiles and and by adding, editing and deleting lots of movies everything is working as expected.
+
+  **4. I want their to be an admin account where they can edit, delete and add new genres.**
+
+  - If the session user signed in is Admin then they will have the added option of adding, editing and deleting the genre selection availible for when users add their movies. If they wish to delete a genre they will be prompted by a modal to confirm their choice. When adding, editing and deleting they will be displayed with a flash message to tell them it has been successful. And this will then be changed in the database. I have been logged in as admin and tested each of these function many times and work as expected every time. <br>
+
+  <img src="static/images/screenshots/genre-page.png" width="450" height="200">  <br>
+
+  **5. I want the user to be able to register an account, login, logout and delete it if they wish.**
+
+  - When a user visits the site they will have the option to register an account if they haven't already done so. When clicking the register link they will be directed to the register form. Here they will need to provide a username and a password. They will need to add the password twice and will not be able to submit the form until the passwords match. The register function will also check for existing usernames to make sure the one they are using doesn't already exist.  Once successfully registerd they will be directed to their profile page. <br>
+
+  <img src="static/images/screenshots/register.png" width="450" height="200">  <br>
+
+  - Once registered, when returning to the site again they will be ablle to log back in to their profile by providing their username and password. <br>
+
+  <img src="static/images/screenshots/login.png" width="450" height="200">  <br>
+
+  Once logged in they will be directed to their profile page. They can choose to log out if they wish by clicking the link. They will also have the option to delete their profile by clicking the button at the bottom of the page. If they click this they will be prompted by a modal to confirm their decision. If they go ahead and delete it they will be presented with a flash message and their information will be removed from the database. <br>
+
+  <img src="static/images/screenshots/delete-account.png" width="450" height="200">  <br>
+
+  - I have tested each of these functions many times across different devices and each work as expected. I have also checked each time with my collections on mongodb to see that the information is being stored or deleted as intended. Each time without and problems or issues. 
+
+
