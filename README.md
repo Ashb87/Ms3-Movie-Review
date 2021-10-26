@@ -433,16 +433,29 @@ To make a clone of my project use the following steps:
  3. Click on **Download Zip.**
  4. Once dowloaded, you can extract the zip file's contents and save to a desktop and run the website locally.
 
- ### Setting up MongoDB
+ ### Deploying to Heroku
 
-  * First create an account and then a cluster. I used the free tier, so chose the region closest to me that had it. Then gave my cluster a name and clicked green 'Create Cluster' button.
+   1. Log in to Heroku, click 'New' and select 'Create New App'. In the window give the app a name and choose the region closest to you and then click 'Create App'.
+   2. In the new app page select settings from the menu, click reveal config vars and complete the following:<br>
 
-  * In the menu, choose Database Access then select green 'Add New Database User'. Here choose a username and password and under priviledges select 'read and write to any database' and then click the green 'Add user' button at bottom.
+  <img src="static/images/screenshots/config-vars.png" width="450" height="300">  <br>
 
-  * Back in the menu select Network Access and then Add IP address, I selected Allow access from anywhere & then clicked green confirm button.
+   3. Next select 'Deploy' from menu, there are three options of deployment available. 
+   4. I chose to use Github, so you need to search and connect to your github repository.
+   5. In the automatic deploys section, choose the branch that you want to deploy from and select Enable Automatic Deploys you can pick and deploy a branch to ensure everything is set up correctly.
 
-  * Next choose collections and click 'Create Database'.
+## Credits
 
-  * Complete the form that open up wth a name for your database and a collection name, mine was pocket-bookcase and my first collection for it was books and we want to use our own data. Click create button.
+### Code and Content
 
-  * Then add the rest of our collections, by the '+' button, see picture below for collections used.
+* [Materialize](https://materializecss.com/) was used for the structure and layout of the site.
+* [Google](https://www.google.com/) was used to find the images selected for the site.
+* [Stackoverflow](https://stackoverflow.com/) was used to help find solutions to the issues I had whilst building my project.
+* [Code Institute](https://codeinstitute.net/) mini task project was used a lot throughout the project to help with functionality across the site.
+* [Youtube](https://www.youtube.com/) was used to embed a movie trailer in to my home page.
+
+### Acknowledgements
+* The **Mini Feb 20201** team on slack for all the feedback and support given to each other.
+* My mentor Rohit Sharma for helping and giving advice for my third milestone project.
+* Friends and Family who have taken their time to offer advice and feedback duirng the devolopment of my project.
+   
