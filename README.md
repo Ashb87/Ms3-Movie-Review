@@ -384,3 +384,65 @@ This all works as intended.
 - The admin can go to the manage genre page where they can add, edit and delete genres. These then appear in the dropdown box for the user to select when adding a movie to the catalog.
 - They can also delete any movie from the database by clicking on the movie from the movies page and then clicking the delete button under the movie. This is only availible to the Admin user. 
 - All these functions work as intended and update the database accordingly.
+
+## Responsive Testing
+
+To help with the responsiveness of my project I was using chrome dev tools throughout the build of the site. This helped to see how it would adapt to different screen sizes and devices. It helped me choose appropriate font sizes and headings so to not look too large on the smaller screens and also enabled me to determine at which point I would need to add any media querys. Thanks to the use of the materialize grid system I actually had very little need for media querys as the site responded so well to different screen sizes.
+
+As well as using the chrome dev tools I also tested the site myself across as many different devices that I had access to. Theese included **Iphone xr,** **Iphone 12,** **Ipad mini,**
+**Samsung galaxy tablet,** **Apple macbook air** and a 21.5 inch **Apple imac** These devices gave me a good variation of the most common screen sizes used. The site responded well to each of the different screen sizes and displayed as I intended. 
+
+When I felt the site was close to being complete I used the mockup screenshot generator **am I responsive** to get an image of the homepage across different size devices and have used this image at the top of this README file.
+
+## HTML and CSS Validator
+
+##
+
+### Further Testing
+
+* I have tested the site across different browsers incluing, **Google Chrome,** **Safari,** and **Microsoft Edge.** to see how it performs across the different browsers and if it would affect its performance or display. The site worked as expected across all browsers and the display remained exactly the same.
+* As previously mentioned I have personally done extensive testing of the site across different devices including **Iphone XR,** **Iphone 12,** **Ipad mini,** **Samsung galaxy tablet,** **Apple macbook air** and an **Apple Imac.** On all of these devices the site and all of its features run smoothly and as expected and the display adjusts accordingly to the screen size its being displayed on.
+* I have also asked friends, family and members of a group in the slack community to review the site and give their honest feedback especially regarding any issues with the performance. The overall feedback was very positive with no known issues or bugs and each saying the site worked well on their devices.
+
+### Known Issues and Bugs
+
+* I have noticed on the add movie and edit movie form on the dropdown field where a user can select a genre that there is a small white dot. When viewing this on my iphone the small dot is slightly bigger and can actually be clicked as another dropdown button. Again bringing up the genre options. When looking in to this I realized it's being caused by the JavaScript validation code provided by code institute in the mini walk through project. I took the code out and tested again and the dot disappeared. However I then couldn't find away to validate the materialize code. I decided to keep the JavaScript code in to highlight what I had found but have not yet found a solution for this. I am hoping in the near future to have a look over the code again and see if I can find my own solution to it. 
+* When a user or admin want to delete something they will be prompted by a modal to confirm their decision. When I was testing the delete genre function I noticed that I could click on one but it was actually just deleting the first one in the list everytime. After a lot of head scratching I realised that when I was clicking delete and the modal was coming up it was no longer targetting the specific genre. By passing the delete category function through the href on the modal and then matching that to the "id" it then worked as intended. After fixing this I then realised it was doing the same thing for the delete movie function as well. So repeated the process with the modal and now all works fine and targets the specific movie/genre through the modal.
+
+## Deployment
+
+### Initial creation
+
+I created the repository using the following steps:
+ 1. Logging into my [GitHub](https://github.com/Ashb87/Quiz-Ms-Project-Two) account and clickng the green button near the top left of the page displaying the text **NEW.**
+ 2. This took me to a page with the option to create a new repository. Under *repository template* I clicked on the *code institute* template.
+ I chose a name for the repository suitable for the project and then clicked the *create repository* button.
+ 3. I opened the new repository and clicked the green *gitpod* button to create a new workplace in Gitpod for writing and editing my code to develop the site.
+
+ ### Forking the GitHub Repository
+Forking a repository enables us to make a copy of the original repository on our GitHub account so we can view it and make changes with out affecting the original work.
+This is done using the following steps:
+ 1. Log in to [GitHub](https://github.com/Ashb87/Ms3-Movie-Review) account and select the relevant repository.
+ 2. To the top right of the page there are three the buttons, the furthest right says **Fork.** Click on this button.
+ 3. A copy of the original repository will now be in your account.
+
+ ### Making a Clone
+To make a clone of my project use the following steps:
+ 1. Go to my [account](https://github.com/Ashb87/Ms3-Movie-Review) and locate relevant repository.
+ 2. Next to the green **Gitpod** button, click on **CODE.**
+ 3. Click on **Download Zip.**
+ 4. Once dowloaded, you can extract the zip file's contents and save to a desktop and run the website locally.
+
+ ### Setting up MongoDB
+
+  * First create an account and then a cluster. I used the free tier, so chose the region closest to me that had it. Then gave my cluster a name and clicked green 'Create Cluster' button.
+
+  * In the menu, choose Database Access then select green 'Add New Database User'. Here choose a username and password and under priviledges select 'read and write to any database' and then click the green 'Add user' button at bottom.
+
+  * Back in the menu select Network Access and then Add IP address, I selected Allow access from anywhere & then clicked green confirm button.
+
+  * Next choose collections and click 'Create Database'.
+
+  * Complete the form that open up wth a name for your database and a collection name, mine was pocket-bookcase and my first collection for it was books and we want to use our own data. Click create button.
+
+  * Then add the rest of our collections, by the '+' button, see picture below for collections used.
