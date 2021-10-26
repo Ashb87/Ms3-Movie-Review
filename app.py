@@ -219,7 +219,7 @@ def delete_movie(movie_id):
     return redirect(url_for('profile', username=session['user']))
 
 
-# Displays categories
+# ------- Displays categories
 
 @app.route("/get_categories")
 def get_categories():

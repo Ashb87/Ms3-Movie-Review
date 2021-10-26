@@ -26,19 +26,20 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
     2. I want the site to be responsive to whichever device I am viewing it on.
     3. I want to understand clearly what the site is for.
     4. I want to be able to register an account easily
-    5. I want to be able to view other peoples reviews
-    6. I want to be able to search for existing reviews.
+    5. I want to be able to view other peoples movies and reviews
+    6. I want to be able to search for existing movies.
 
-  * #### Returning Visitor Goals
+  * #### Returning/Frequent Visitor Goals
     1. I want to be able to login to my account easily for full access of the site.
-    2. I want to be able to add my own reviews.
-    3. I want to view all my existing reviews through my own profile page.
-    4. I want to be able to edit and delete my existing reviews.
+    2. I want to be able to add my own movies.
+    3. I want to view all my existing movies through my own profile page.
+    4. I want to be able to edit and delete my existing movies.
     5. I want to follow the site through their social links. 
 
   * #### Admin Goals
     1. As an admin of the site I Wwould like full access to all pages
-    2. I would like to be able to add, edit or delete any genre categories 
+    2. I would like to be able to add, edit or delete any genre categories
+    3. I would like to be able to delete any review from the site 
 
 ### Design
 
@@ -90,7 +91,7 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
     * At the top of the page there is a search bar where the user can look for a movie either by its name or genre.
     * For users not logged in there is a button giving them the option to log in allowing them to add a review.
     * For logged in users this buttin becomes an *add movie button* linking them to the add movie form.
-    * Each review already added is then displayd underneath. showing the name of the movie, an image, if provided and who created the review. Within each movie card is a button linking the user to the full review of that specific movie. If they are not logged in they will be prompted to do so before viewing the full review.
+    * Each review already added is then displayd underneath. showing the name of the movie, an image, if provided and who created the review. Within each movie card is a button linking the user to the full information and review of that specific movie. 
 
   * ### Full Review Page 
     * On this page the user can see the film title with an image card if provided. Then they will be able to see the genre, a movie synopsis, the users review, a rating out of 5 and who the review was added by.
@@ -165,6 +166,8 @@ To take this site further, with more knowledge and time there would be a few ele
 
 ### Testing User Stories and Site Goals
 
+### Site Goals
+
   **1. I want the site to be attractive, responsive and easy to navigate for the user.**
 
   - To get feedback on the visual aspect of the project it has been shared with many friends and family and also other students of code institute via the slack portal. The feedback on the visual aspect has been really good with the choice of colors recieving positive reviews and many saying it has a good movie vibe to the look of the site.
@@ -175,7 +178,7 @@ To take this site further, with more knowledge and time there would be a few ele
 
   **2. I want the purpose of the site to be clear to the user**
 
-  - When the user first sees the home page there is a hero image with a simple heading of *Love the big screen?* With some further text underneath explaining what the movie catalog is for. I think this gives a claer intention for the site. Across the pages there are further images displaying movie cards which help add to the feel of a movie site. 
+  - When the user first sees the home page there is a hero image with a simple heading of *Love the big screen?* With some further text underneath explaining what the movie catalog is for. I think this gives a clear intention for the site. Across the pages there are further images displaying movie cards which help add to the feel of a movie site. 
 
   <img src="static/images/screenshots/hero-img.png" width="450" height="200"> <br>
   <img src="static/images/screenshots/movie-card.png" width="450" height="200"> 
@@ -233,4 +236,151 @@ To take this site further, with more knowledge and time there would be a few ele
 
   - I have tested each of these functions many times across different devices and each work as expected. I have also checked each time with my collections on mongodb to see that the information is being stored or deleted as intended. Each time without and problems or issues. 
 
+### User Stories
 
+### First time visitor goals
+
+  **1. I want the site to be attractive and and easy to navigate.**
+
+  - I have asked many friends, family and also members of the slack community for their honest feedback on the design and layout of the site. It has recieved very positive reviews especially regarding the colour scheme with many people saying it has definite movie feel to it. The colors contrast well agaisnt each othr making all the features stand out and easy to view and read. As well as the navbar at the top and the collapsible navbar for smaller screens, I have also added different button links througout the pages to make navigating the site even easier for the users.
+
+  **2. I want the site to be responsive to whichever device I am viewing it on.**
+
+  - By using the materialize grid system it was very easy to make the site responsive with different features collapsing down in to their own columns when required depending on the screen size. 
+  - I have tested the site on many differnet screen sizes, including, Iphone Xr, Iphone 12, Ipad mini, Samsung Galaxy tablet, Macbook air and IMac desktop. The site responds well to the different devices and screen sizes and the layout adapts as intended. 
+  - I also ran the site through the mockup screenshot generator [am i responsive](http://ami.responsivedesign.is/) and have used the resulting image at the top of this README file.
+
+  **3. I want to understand clearly what the site is for.**
+
+  - *see point 2 of **site goals***
+
+  **4. I want to be able to register an account easily**
+
+  - *see point 5 of **site goals***
+
+  **5. I want to be able to view other peoples movies and reviews**
+  **6. I want to be able to search for existing reviews.**
+
+  When a user visits the site they will be able to view all added movies by other users from the movie page. From here they will also be able to search for existing movies by its name or genre. They do not need to be logged in to see these. <br>
+
+  <img src="static/images/screenshots/search-movie.png" width="450" height="150">  <br>
+
+  They will then be able to click on the image provided for a specific movie or click the button link to view the full information about that movie.
+
+### Returning/Frequent Visitor Goals
+
+  **1. I want to be able to login to my account easily for full access of the site.**
+
+  - *see point 5 of **site goals***
+
+  **2. I want to be able to add my own reviews**
+
+  - *see point 3 of **user goals***
+
+  **3. I want to view all my existing reviews through my own profile page**
+
+  - When the user has created an account they will be able to visit their profile page. Here they will be able to see all movies they have already added to the catalog. With each movie they will have the option to edit or delete it. If they haven't yet added any movies then it will be displayed on screen *You haven't added any movies yet** <br>
+
+  <img src="static/images/screenshots/no-movies-yet.png" width="450" height="250">  <br>
+
+  **4. I want to be able to edit and delete my existing reviews**
+
+  - *see point 3 of **user goals***
+
+  **5. I want to follow the site through their social links**
+
+  - In the footer of the page that is the same across all the pages there is the option to follow the movie catalog through social button links. These will all open in separate pages. As this is for project purposes the social links will just direct the user to the home page of each link. <br>
+
+  <img src="static/images/screenshots/social-links.png" width="450" height="150">  <br>
+
+### Admin Goals
+
+  **1. As an admin of the site I Wwould like full access to all pages**
+
+  - When the user session is logged in as admin they will have access to the manage genre page of the site. This is only availible for the Admin user. They will also have the added option of deleting any users movie review if they feel necessary. Again an option only availible to the Admin user.
+
+  **2. I would like to be able to add, edit or delete any genre categories**
+
+  - *see point 4 of **user goals***
+
+  **3. I would like to be able to delete any review from the site**
+
+  - The Admin user will have the option to click on any movie added to the catalog and then delete it from the database. They will be prompted my a modal to confirm their decision.
+
+## Features Testing
+Any relevant screenshots can be seen above in the **user stories** testing section if not added here
+
+* ### Across all pages
+
+ - The navbar has been tested many times with users logged in and out to make sure the correct links are availible depending on the users login status. On small screen sizes the navbar collapses down to a burger icon as intended bringing the nav bar in from the left for the user to click on their desired link. <br>
+
+ Logged out: <br>
+
+<img src="static/images/screenshots/logged-out.png" width="450" height="200">  <br>
+
+ Logged in: <br>
+
+<img src="static/images/screenshots/logged-in.png" width="450" height="200">  <br>
+
+ Sidenav: <br>
+
+ <img src="static/images/screenshots/burger-icon.png" width="450" height="200">  <br>
+ <br>
+ <img src="static/images/screenshots/sidenav.png" width="450" height="200">  <br>
+
+ - The social links appear in the footer across all pages and work as intended by directing the user to their chosen link and opening the site in a separate tab.
+
+* ### Home Page
+
+- The video embedded from youtube displays nicely across all screen sizes thanks to the materialize class for responsive videos. It works as intended with the option to make the video full screen as you would expect.
+
+- The buttons under the video all display correctly depending if the user is logged in or out and all the links work as intended.
+
+Logged in:<br>
+
+<img src="static/images/screenshots/logged-in-home.png" width="450" height="300">  <br>
+
+Logged out:<br>
+
+<img src="static/images/screenshots/logged-out-home.png" width="450" height="300">  <br>
+
+* ### Login/register Page
+
+- When the user wants to register an account they will need to fill out a username and password field. The password will be required twice to ensure they match and wont allow the user to submit unless they are the same. There is a minimum of 5 characters for each field and will prompt the user if they don't meet these requiremments. I have tried creating accounts with already registered usernames to the function works correctly and displays the flash message telling the user that the name already exists. <br>
+
+<img src="static/images/screenshots/user-exists.png" width="450" height="300">  <br>
+
+- When logging in they will need their username and password. If these dont match any from the database they will told incorrect username or password with a flash message. 
+-If successful with registering or logging in the will be directed to their profile page and displayed a flash message.
+
+* ### Movie Page
+
+- On the movie page at the top users can search for existing movies by typing in the name or genre of a movie. This works as intended.
+- If not logged in they will be prompted to do so to add a movie. Otherwise they will be able to click the add movie button and will be directed to the add movie form page. All links work as intended. 
+- The user can also click on the movie card or link to view all information and the users review provided for that movie. This works as intended.  
+
+* ### Full Review Page
+
+- When the user clicks on a movie from the movie page they will be taken to the review page where they can view some information about the film and the users review. There is a button underneath directing them back to the movie page rather than having to use the navbar or back button. All links work as intended.
+
+* ### Profile Page
+
+- When a user is logged in there name is displayed at the top in a card panel with a button linking them to the add movie form page.
+- If they are yet to add a review this will be displayed on the screen. Otherwise their added movies will appear on their page. With each movie having an edit or delete button. 
+- At the bottom of their profile page there is a delete account button. 
+- Both the delete movie and delete account buttons will prompt the user to confirm their decision with a modal. 
+- All the links work and each users own reviews are displayed on their profile page as intended.
+
+* ### Add/Edit Movie Page
+
+- If a user is logged in they can click the add movie buttons on the site. They will be directed to the add movie form page where they can add a movie of their choice and fill out some required information. With the option to add an image.
+- They can also go to their profile to view their movies and from here edit any they have already submitted. 
+- Both the add and edit movie functions work as intended and add/edit the information stored in the database. 
+- The user is displayed with a flash message to tell them if they have been successful in adding or editing a movie.
+This all works as intended.
+
+* ### Features for Admin
+
+- The admin can go to the manage genre page where they can add, edit and delete genres. These then appear in the dropdown box for the user to select when adding a movie to the catalog.
+- They can also delete any movie from the database by clicking on the movie from the movies page and then clicking the delete button under the movie. This is only availible to the Admin user. 
+- All these functions work as intended and update the database accordingly.
