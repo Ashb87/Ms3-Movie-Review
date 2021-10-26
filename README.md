@@ -458,4 +458,5 @@ To make a clone of my project use the following steps:
 * The **Mini Feb 20201** team on slack for all the feedback and support given to each other.
 * My mentor Rohit Sharma for helping and giving advice for my third milestone project.
 * Friends and Family who have taken their time to offer advice and feedback duirng the devolopment of my project.
+* [w3schools](https://www.w3schools.com/) for all its useful information in helping to build my project.
    
