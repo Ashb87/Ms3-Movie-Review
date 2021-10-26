@@ -1,3 +1,5 @@
+"""Imports used to connect with and use MongoDB,use flask templates
+and werkzeug for password security"""
 import os
 from flask import (
     Flask, flash, render_template,
@@ -23,6 +25,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
+    """ returns user to home page """
     return render_template("index.html")
 
 
@@ -30,6 +33,8 @@ def home():
 
 @app.route("/movies")
 def movies():
+    """ movie view , finds all added movies and
+        returns them to the template """
     movies = list(mongo.db.movies.find())
     return render_template("movies.html", movies=movies)
 
@@ -38,6 +43,8 @@ def movies():
 
 @app.route("/review/<movie_id>")
 def review(movie_id):
+    """ finds review for specific movie and returns
+        it to the template """
     review = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
     return render_template("reviews.html", review=review)
 
@@ -46,6 +53,8 @@ def review(movie_id):
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """ gets user input from the search box and looks
+        for a match in the databse """
     query = request.form.get("query")
     movies = list(mongo.db.movies.find({"$text": {"$search": query}}))
     return render_template("movies.html", movies=movies)
@@ -55,6 +64,7 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """ creates new user in the database when form is submitted """
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -82,6 +92,9 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """ Looks for users information in database when form is
+        submitted. If requirements match user is directed
+        to their profile page """
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -90,11 +103,12 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                existing_user["password"], request.form.get(
+                    "password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -112,7 +126,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
+    """ grab the session user's username from db """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     movies = list(mongo.db.movies.find(
@@ -129,7 +143,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
+    """ removes the user from session cookie """
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -139,6 +153,8 @@ def logout():
 
 @app.route("/add_movie", methods=["GET", "POST"])
 def add_movie():
+    """ When form is submiited the information is stored in
+        the database and added to the movie page template """
     if request.method == "POST":
         movie = {
             "category_name": request.form.get("category_name"),
@@ -162,6 +178,8 @@ def add_movie():
 
 @app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
 def edit_movie(movie_id):
+    """ Allows user to edit information already
+        added to the database """
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
     if 'user' not in session:
         return render_template("error_pages/404.html")
@@ -169,7 +187,7 @@ def edit_movie(movie_id):
         return render_template("error_pages/404.html")
     if movie['added_by'] != session['user'] or session['user'] == 'Admin':
         return render_template("error_pages/404.html")
-    if request.method == "POST":    
+    if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name"),
             "movie_name": request.form.get("movie_name"),
@@ -194,19 +212,30 @@ def edit_movie(movie_id):
 
 @app.route("/delete_movie/<movie_id>")
 def delete_movie(movie_id):
+    """ Deletes the chosen movie and all its data from the
+        database """
     mongo.db.movies.remove({"_id": ObjectId(movie_id)})
     flash("Your review has been Successfully Deleted")
     return redirect(url_for('profile', username=session['user']))
 
 
+# Displays categories
+
 @app.route("/get_categories")
 def get_categories():
+    """ Pulls the category information from the database
+        and returns to the category template """
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
+# ------- Add category
+
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    """ Admin can add a new category to
+        the genre page, which is then addd to the drop
+        down field for a user to choose a genre """
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -217,6 +246,8 @@ def add_category():
 
     return render_template("add_category.html")
 
+
+# ------- Edit category
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
@@ -233,12 +264,18 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+# ------- Delete category
+
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    """ Admin can delete genres from the category collection
+        in the database """
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Genre Successfully Deleted")
     return redirect(url_for("get_categories"))
 
+
+# ------- Delete user account
 
 @app.route("/delete_user")
 def delete_user():
