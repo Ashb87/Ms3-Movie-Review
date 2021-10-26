@@ -398,6 +398,10 @@ When I felt the site was close to being complete I used the mockup screenshot ge
 
 ### HTML validation
 
+ - To test my HTML code I used the [W3C Markup Validator Tool](https://validator.w3.org/)
+ - There were no errors found just two warnings for a section missing a header which can be seen in the image below. <br>
+ <img src="static/images/screenshots/html.png" width="450" height="300">  <br>
+
 ### CSS validation
 
   - To test my CSS code I used the [W3C CSS Validator Tool](https://jigsaw.w3.org/css-validator/) <br>
