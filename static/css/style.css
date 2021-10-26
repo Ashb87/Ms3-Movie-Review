@@ -21,8 +21,10 @@ body{
 /* --- Headings --- */
 
 h1,
+h2,
 h3,
-h4 {
+h4,
+h5 {
     font-family: "bebas neue";
     color:rgb(182, 181, 181);
 }
@@ -299,6 +301,12 @@ hr {
 .genre-add,
 .genre-edit {
     background-color: #78909c;
+}
+
+/* --- Error Pages --- */
+
+.error-text {
+    font-size: 18px;
 }
 
 /* --- Media Query --- */
