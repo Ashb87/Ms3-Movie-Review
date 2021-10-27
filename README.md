@@ -1,5 +1,7 @@
 # Milestone Project Three | Movie Review
 
+<img src="static/images/screenshots/am-i-responsive.png"> 
+
 [View the live project here]() <br>
 
 ## About
