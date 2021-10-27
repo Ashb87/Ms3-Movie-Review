@@ -1,4 +1,4 @@
-# Milestone Project Three | Movie Review
+# Milestone Project Three | Movie Catalog
 
 <img src="static/images/screenshots/am-i-responsive.png"> 
 
@@ -7,7 +7,7 @@
 ## About
 
 This website has been created for my Milestone 3 Datacentric Development project. 
-As a movie fan myself and after speaking with my mentor, I decided I would like to create a site where users can add and browse movie reviews of all genres. Using the CRUD functionality they will be able to create their own account. From here they can add, edit and delete their own reviews. As well as read the reviews from other users. 
+As a movie fan myself and after speaking with my mentor, I decided I would like to create a movie catalog site where users can add and browse movies of all genres, giving snippets of information for each movie as well as a movie image, their own review and a star rating. Using the CRUD functionality they will be able to create their own account. From here they can add, edit and delete their own movies. As well as view movies added by other users.  
 
 ## Contents
 
