@@ -50,8 +50,8 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
   * #### Wireframes
 
   To create my wireframes I used balsamiq. I have done a design for both large and smaller screens to show how the layout of the site will change accordingly with different screen sizes. The links to the wireframes are below. <br>
-  * [Large screens](https://github.com/Ashb87/Ms3-Movie-Review/blob/main/assets/wireframes/Movie-review-large.png)
-  * [Smaller screens]() 
+  * [Large screens](https://github.com/Ashb87/Ms3-Movie-Review/blob/main/assets/wireframes/ms3-wireframe-large.png)
+  * [Smaller screens](https://github.com/Ashb87/Ms3-Movie-Review/blob/main/assets/wireframes/ms3-wireframe-small.png) 
 
   The majority of the site has been kept very similar to the design of my wireframes. The main difference is on the *movie review page.* After speaking with my mentor he advised it would be better to have all the movie cards on one page with minimal information, and then open the full review for each individual review on a separate page. By doing this it has reduced the amount of scrolling needed on the movie review page as it is more condensed and much more user friendly. I also like the way the full review opens up on a separate page and think it gives a more professional feel to the site.
 
