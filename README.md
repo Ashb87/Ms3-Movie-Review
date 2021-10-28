@@ -2,7 +2,7 @@
 
 <img src="static/images/screenshots/am-i-responsive.png"> 
 
-[View the live project here]() <br>
+[View the live project here](https://ms3-movie-review.herokuapp.com/) <br>
 
 ## About
 
@@ -10,6 +10,25 @@ This website has been created for my Milestone 3 Datacentric Development project
 As a movie fan myself and after speaking with my mentor, I decided I would like to create a movie catalog site where users can add and browse movies of all genres, giving snippets of information for each movie as well as a movie image, their own review and a star rating. Using the CRUD functionality they will be able to create their own account. From here they can add, edit and delete their own movies. As well as view movies added by other users.  
 
 ## Contents
+
+  * [User Experience](#user-experience-ux)
+    - [Site Goals](#site-goals)
+    - [User Stories](#user-stories)
+    - [Design](#design)
+      - [Wireframes](#wireframes)
+      - [Imagery](#imagery)
+      - [Color Scheme](#color-scheme)
+      - [Typography](#typography)
+  
+  * [Features](#features)
+    - [Across all pages](#across-all-pages)
+    - [Home Page](#home-page)
+    - [Login/Register Page](#login-register-page)
+    - [Movie Page](#movie-page)
+    - [Full Review Page](#full-review-page)
+    - [Profile Page](#profile-page)
+    - [Add/Edit Movie Page](#add-edit-movie-page)
+    - [Features for Admin](#features-for-admin)
 
 ## User Experience-(UX)
 
@@ -83,8 +102,7 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
     * Embedded video from youtube displaying a recent movie trailer to give the effect of an upto date site. Video is responsive to all screen sizes.
     * If user is logged out there is a button under the video that links the user to the login page or if not yet registered then they can link to the register page. If logged in they will instead have the option to add a movie review.
     
-
-  * ### Login/Register Page
+  * ### Login-Register Page
     * For the register page the user will be required to create a username with a minimum of 5 characters. And then a password, again minimum of 5 characters. They will need to add the password twice for extra security with the register button being disabled until they match.
     * For the login page they will be required to input their username and password.
     * For both the login and registered pages a flash message will be displayed when user is successful in loggin in or registering.
@@ -104,7 +122,7 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
     * If the user has no reviews there will be a heading saying no reviews yet. Otherwise their reviews will be displayed below, showing the movie title, the image provided or default image and then two buttons. One linking them to the edit review page. The other is delete review button. If they click this they will be prompted my a modal to either confirm or canel their choice to delete the review.
     * At the bottom below their reviews they will have the option to delete their account. Again prompted by a modal to confirm oor cancel their decision.
 
-  * ### Add/Edit Movie Page
+  * ### Add-Edit Movie Page
     * For the add movie page a form is displayed for the use to fill out. There is a dropdown option for the user to pick a genre. They will then need to fill in the movie name, movie synopsis, and their review of the movie. They will then have the option to add an image url and finally pick a star rating out of 5. Once all filled in they can then click the add movie buton and their review will appear on the movie page.
     * For the edit movie page it will be the same as above with the input fields already filled with previously given information. They can then change what they like on the review and click *confirm edit* or cancel their changes by clicking on the *cancel changes* button. 
 
@@ -418,9 +436,26 @@ When I felt the site was close to being complete I used the mockup screenshot ge
 
   - No issues found with pep8 validator
 
-##
+## Lighthouse Testing
 
-### Further Testing
+  - I ran my pages through the google lighthouse tester to check the performance of my pages. The results can be seen in the images below. The results were overall pretty good with most of the scores being 90 and above. With performance getting 100 on four out of the five pages tested. The score that seemed to generate the lowest mark overall was accessibility. When reading the report to find out why it was mainly down to foreground and background colors not having enough contrast and also using H tags not in descending order. I think that the colors work well together and certainly don't cause any issues regarding contrast and being able to read or distinguish any elements across the pages. The H tags have been well thought out to highlight different elements throughout the pages. As a whole I am pleased with the results.
+
+  * Home Page <br>
+  <img src="static/images/screenshots/lighthouse-home.png" width="350" height="300">  <br>
+
+  * Movies Page <br>
+  <img src="static/images/screenshots/lighthouse-movies.png" width="350" height="300">  <br>
+
+  * Profile Page <br>
+  <img src="static/images/screenshots/lighthouse-profile.png" width="350" height="300">  <br>
+
+  * Login Page <br>
+  <img src="static/images/screenshots/lighthouse-login.png" width="350" height="300">  <br>
+
+  * Add movie Page <br>
+  <img src="static/images/screenshots/lighthouse-add-movie.png" width="350" height="300">  <br>
+
+## Further Testing
 
 * I have tested the site across different browsers incluing, **Google Chrome,** **Safari,** and **Microsoft Edge.** to see how it performs across the different browsers and if it would affect its performance or display. The site worked as expected across all browsers and the display remained exactly the same.
 * As previously mentioned I have personally done extensive testing of the site across different devices including **Iphone XR,** **Iphone 12,** **Ipad mini,** **Samsung galaxy tablet,** **Apple macbook air** and an **Apple Imac.** On all of these devices the site and all of its features run smoothly and as expected and the display adjusts accordingly to the screen size its being displayed on.
@@ -475,6 +510,7 @@ To make a clone of my project use the following steps:
 * [Stackoverflow](https://stackoverflow.com/) was used to help find solutions to the issues I had whilst building my project.
 * [Code Institute](https://codeinstitute.net/) mini task project was used a lot throughout the project to help with functionality across the site.
 * [Youtube](https://www.youtube.com/) was used to embed a movie trailer in to my home page.
+* [Online Tutorials](https://www.youtube.com/watch?v=Ep78KjstQuw&t=578s) was used to help build the star rating when adding a movie
 
 ### Acknowledgements
 * The **Mini Feb 20201** team on slack for all the feedback and support given to each other.
