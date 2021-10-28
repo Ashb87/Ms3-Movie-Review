@@ -64,7 +64,8 @@ nav.custom-bg {
 }
 
 .sidenav li a{
-    color: white;
+    color: #fcbf49;
+    font-size: 18px;
 }
 
 /* --- Footer */
