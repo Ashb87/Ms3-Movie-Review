@@ -215,7 +215,7 @@ def delete_movie(movie_id):
     """ Deletes the chosen movie and all its data from the
         database """
     mongo.db.movies.remove({"_id": ObjectId(movie_id)})
-    flash("This movie has been Successfully Deleted")
+    flash("Movie Successfully Deleted")
     return redirect(url_for('profile', username=session['user']))
 
 
