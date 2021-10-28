@@ -23,6 +23,15 @@
                         <label for="category_name">Movie Genre</label>
                     </div>
                 </div>
+                <!-- Year Released -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-video prefix"></i>
+                        <input id="year_released" name="year_released" minlength="2" 
+                            maxlength="4" value ="{{ movie.year_released }}" type="text" class="validate" required>
+                        <label for="year_released">Year Released</label>
+                    </div>
+                </div>
                 <!-- Movie Name -->
                 <div class="row">
                     <div class="input-field col s12">
