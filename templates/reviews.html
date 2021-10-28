@@ -31,11 +31,25 @@
         <!-- Allows admin to delete review -->
         <div class="row">
             <div class="col s12 center-align">
+                <!-- Modal link to give Admin the option to cancel deleting the movie-->
                 {% if session.user|lower == "admin"|lower %}
-                <a href="{{ url_for('delete_movie', movie_id=review._id) }}" class="btn btn-delete btn-small">Delete Movie</a>
+                    <a class="btn-small btn-delete modal-trigger" 
+                    href="#{{ url_for('delete_movie', movie_id=review._id) }}">Delete Movie</a>
                 {% endif %}
             </div>
         </div>
+        <!-- Modal Body -->
+        <div id="{{ url_for('delete_movie', movie_id=review._id) }}" class="modal">
+            <div class="modal-content">
+                <h3>You sure you want to do that?</h3>
+                <h5>Do you definitely want to delete the movie {{ review.movie_name }}?</h5>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close black-text btn-cancel btn-small">Cancel</a>
+                <a href="{{ url_for('delete_movie', movie_id=review._id) }}" class="btn-small btn-delete center-align">Delete Movie</a>
+            </div>
+        </div>
+
         <!-- Takes user back to movie page -->
         <div class="row">
             <div class="col s12 center-align">
