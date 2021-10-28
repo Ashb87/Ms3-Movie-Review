@@ -29,6 +29,24 @@ As a movie fan myself and after speaking with my mentor, I decided I would like 
     - [Profile Page](#profile-page)
     - [Add/Edit Movie Page](#add-edit-movie-page)
     - [Features for Admin](#features-for-admin)
+  * [Future Features](#features-to-implement-in-the-future)
+
+  * [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs-used)
+
+  * [Testing](#testing)
+    - [Testing User Stories and Site Goals](#testing-user-stories-and-site-goals)
+    - [Features Testing](#features-testing)
+    - [Responsive Testing](#responsive-testing)
+    - [Code Validators](#code-validators)
+    - [Lighthouse Testing](#lighthouse-testing)
+    - [Further Testung](#further-testing)
+    - [Known Issues and Bugs](#known-issues-and-bugs)
+
+  * [Deployment](#deployment)
+
+  * [Credits](#credits)
 
 ## User Experience-(UX)
 
