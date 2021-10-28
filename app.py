@@ -19,11 +19,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-# Task manager project from code institute was used a lot to help with the build of this project
+# Task manager project from code institute was used a lot to help with the
+# build of this project
 # https://github.com/TravelTimN/flask-task-manager-project/blob/demo/app.py
 
-# Document supplied by my mentor to help understand and implement error handlers
+# Document supplied by my mentor to help understand and implement error
+# handlers
 # https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator
+
 
 # ------- Home
 
@@ -313,4 +316,4 @@ def internal_server_error(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
