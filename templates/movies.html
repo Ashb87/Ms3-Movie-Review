@@ -56,12 +56,13 @@
                     <!-- If Movie review has image supplied display this-->
                     {% if movie.image_url %}
                 
-                    <a href="{{ url_for('review', movie_id=movie._id) }}"><img width="200" height="300" src="{{ movie.image_url }}" alt="Image of the movie being reviewed"></a>
+                    <a href="{{ url_for('review', movie_id=movie._id) }}"><img width="200" height="300" 
+                        src="{{ movie.image_url }}" alt="Image of the movie being reviewed"></a>
                     
                     <!-- If no image url supplied display this default image -->
                     {% else %}
-                    <img width="200" height="300" src="static/images/default-img.jpeg" 
-                    alt="Image of an old camera reel">
+                    <a href="{{ url_for('review', movie_id=movie._id) }}"><img width="200" height="300" 
+                        src="static/images/default-img.jpeg" alt="Image of an old camera reel"></a>
                     {% endif %}
                     </div>
                     <p class="center-align"><strong>Movie added by:</strong> <em>{{ movie.added_by }}</em></p>
