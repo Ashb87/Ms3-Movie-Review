@@ -26,11 +26,11 @@
                         <div id="{{ url_for('delete_category', category_id=category._id) }}" class="modal">
                             <div class="modal-content">
                                 <h3>You sure you want to do that?</h3>
-                                <p>Do you definitely want to delete this category?</p>
+                                <h6>Do you definitely want to delete this genre?</h6>
                             </div>
                             <div class="modal-footer">
                                 <a href="#!" class="modal-close black-text btn-cancel btn-small">Cancel</a>
-                                <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn-small btn-delete center-align">Delete Movie</a>
+                                <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn-small btn-delete center-align">Delete Genre</a>
                             </div>
                         </div>
                     </div>
