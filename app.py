@@ -167,7 +167,7 @@ def add_movie():
             "added_by": session["user"]
         }
         mongo.db.movies.insert_one(movie)
-        flash("Movie Review Successfully Added")
+        flash("Your Movie Wad Successfully Added")
         return redirect(url_for("movies"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -199,7 +199,7 @@ def edit_movie(movie_id):
             "added_by": session["user"]
         }
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
-        flash("Movie Review Successfully Updated")
+        flash("Movie Successfully Updated")
         return redirect(url_for(
             "profile", username=session["user"]))
 
@@ -215,7 +215,7 @@ def delete_movie(movie_id):
     """ Deletes the chosen movie and all its data from the
         database """
     mongo.db.movies.remove({"_id": ObjectId(movie_id)})
-    flash("Your review has been Successfully Deleted")
+    flash("This movie has been Successfully Deleted")
     return redirect(url_for('profile', username=session['user']))
 
 
@@ -241,7 +241,7 @@ def add_category():
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
-        flash("New Category Added")
+        flash("New Genre Added")
         return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
@@ -257,7 +257,7 @@ def edit_category(category_id):
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
-        flash("Category Successfully Updated")
+        flash("Genre Successfully Updated")
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
