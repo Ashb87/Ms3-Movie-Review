@@ -31,12 +31,13 @@
                     <!-- If Movie review has image supplied display this-->
                     {% if movie.image_url %}
                 
-                    <img width="200" height="300" src="{{ movie.image_url }}" alt="Image of the movie being reviewed">
+                    <a href="{{ url_for('review', movie_id=movie._id) }}"><img width="200" height="300" 
+                        src="{{ movie.image_url }}" alt="Image of the movie being reviewed"></a>
                     
                     <!-- If no image url supplied display this default image -->
                     {% else %}
-                    <img width="200" height="300" src="/static/images/default-img.jpeg" 
-                    alt="Image of an old camera reel">
+                    <a href="{{ url_for('review', movie_id=movie._id) }}"><img width="200" height="300" 
+                        src="/static/images/default-img.jpeg" alt="Image of an old camera reel"></a>
                     {% endif %}
                 </div>
                 
@@ -57,10 +58,6 @@
                                 <a href="#!" class="modal-close black-text btn-cancel btn-small">Cancel</a>
                                 <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn-small btn-delete center-align">Delete Movie</a>
                             </div>
-                        </div>
-                        <div class="row center-align">
-                            <a href="{{ url_for('review', movie_id=movie._id) }}" 
-                            class="btn-small btn-review">Full review</a>
                         </div>
                     {% endif %}
                 </div>
