@@ -11,7 +11,7 @@
 body{
     min-height: 100vh;
     background-color: #022538;
-    font-family: "ubuntu";
+    font-family: ubuntu, sans-serif;
 }
 
 .text-shadow {
@@ -23,9 +23,8 @@ body{
 h1,
 h2,
 h3,
-h4,
-h5 {
-    font-family: "bebas neue";
+h4 {
+    font-family: "bebas neue", sans-serif;
     color:rgb(182, 181, 181);
 }
 
@@ -34,7 +33,7 @@ h5 {
 }
 
 .movie-title {
-    font-family: "ubuntu";
+    font-family: ubuntu, sans-serif;
 }
 
 /* --- Nav Bar --- */
@@ -223,7 +222,6 @@ input[name=rating] {
     color: rgb(182, 181, 181) ;
   }
 
-
 /* --- Movie Review Page ---*/
 
 .movie-img-container img{
@@ -320,9 +318,4 @@ nav .brand-logo{
 .flash-card{
     width: 80%;
     }
-}
-
-
-.input-field label {
-    color: black;
 }
