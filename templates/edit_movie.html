@@ -63,7 +63,8 @@
                         <label for="image_url">Insert new image URL <em>*Optional*</em></label>
                     </div>
                 </div>
-                <!-- Add star rating-->
+                <!-- Add star rating
+                     code inspired from https://www.youtube.com/watch?v=Ep78KjstQuw&t=208s -->
                 <div role="radiogroup" class="rating-stars">
                     <p>Rate book: </p>
                     <label for="rating" tabindex="0" aria-label="1 star"><i class="fas fa-star"></i></label>
@@ -85,6 +86,7 @@
                         </button>
                     </div>
                     <div class="col s12 center-align">
+                        <!-- Links back to users profile -->
                         <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small btn-delete text-shadow">
                             Cancel Changes
                         </a>
