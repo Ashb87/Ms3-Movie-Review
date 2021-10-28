@@ -9,6 +9,8 @@
 This website has been created for my Milestone 3 Datacentric Development project. 
 As a movie fan myself and after speaking with my mentor, I decided I would like to create a movie catalog site where users can add and browse movies of all genres, giving snippets of information for each movie as well as a movie image, their own review and a star rating. Using the CRUD functionality they will be able to create their own account. From here they can add, edit and delete their own movies. As well as view movies added by other users.  
 
+Please note I originally intended to make it more just a review site but decided to change it to a movie catalog with reviews also added. So my github repository has a different name to that on my README.
+
 ## Contents
 
   * [User Experience](#user-experience-ux)
