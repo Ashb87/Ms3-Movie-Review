@@ -167,7 +167,7 @@ def add_movie():
             "added_by": session["user"]
         }
         mongo.db.movies.insert_one(movie)
-        flash("Your Movie Wad Successfully Added")
+        flash("Your Movie Was Successfully Added")
         return redirect(url_for("movies"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
